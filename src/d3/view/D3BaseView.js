@@ -1,10 +1,19 @@
 
-import { D3BaseSubView } from './D3BaseSubView.js';
-import { D3BaseSubViewOptions } from '../options/D3BaseSubViewOptions.js';
-import { D3BaseViewOptions } from '../options/D3BaseViewOptions.js';
+// import { D3BaseSubView } from './D3BaseSubView.js';
+// import { D3BaseSubViewOptions } from '../options/D3BaseSubViewOptions.js';
+// import { D3BaseViewOptions } from '../options/D3BaseViewOptions.js';
 
-import NshmpError from '../../error/NshmpError.js';
-import { Preconditions } from '../../error/Preconditions.js';
+// import NshmpError from '../../error/NshmpError.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const d3 = require('d3');
+
+const { D3BaseSubView } = require('./D3BaseSubView');
+const { D3BaseSubViewOptions } = require('../options/D3BaseSubViewOptions');
+const { D3BaseViewOptions } = require('../options/D3BaseViewOptions');
+const NshmpError = require('../../error/NshmpError');
+const Preconditions = require('../../error/Preconditions');
+
 
 /**
  * @fileoverview Create a base view for plots to reside. The view 
@@ -17,7 +26,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3BaseView
  * @author Brandon Clayton
  */
-export class D3BaseView {
+class D3BaseView {
 
   /**
    * @private 
@@ -702,7 +711,7 @@ export class D3BaseView {
  * @class D3BaseViewBuilder
  * @author Brandon Clayton
  */
-export class D3BaseViewBuilder {
+class D3BaseViewBuilder {
 
   /** @private */
   constructor() {
@@ -839,7 +848,7 @@ export class D3BaseViewBuilder {
  * @class D3BaseViewFooterElements
  * @author Brandon Clayton
  */
-export class D3BaseViewFooterElements {
+class D3BaseViewFooterElements {
 
   constructor() {
     /** @type {HTMLElement} The footer button toolbar element */
@@ -897,7 +906,7 @@ export class D3BaseViewFooterElements {
  * @class D3BaseViewHeaderElements
  * @author Brandon Clayton
  */
-export class D3BaseViewHeaderElements {
+class D3BaseViewHeaderElements {
 
   constructor() {
     /** @type {HTMLElement} The grid line check icon element */
@@ -944,3 +953,10 @@ export class D3BaseViewHeaderElements {
   }
 
 }
+
+module.exports = {
+  D3BaseView,
+  D3BaseViewBuilder,
+  D3BaseViewFooterElements,
+  D3BaseViewHeaderElements
+};

@@ -1,7 +1,12 @@
 
-import { D3BaseSubViewOptions } from '../options/D3BaseSubViewOptions.js';
+// import { D3BaseSubViewOptions } from '../options/D3BaseSubViewOptions.js';
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const d3 = require('d3');
+
+const { D3BaseSubViewOptions } = require('../options/D3BaseSubViewOptions');
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @package
@@ -11,7 +16,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3BaseSubView
  * @author Brandon Clayton
  */
-export class D3BaseSubView {
+class D3BaseSubView {
 
   /**
    * Create new sub view.
@@ -133,7 +138,7 @@ export class D3BaseSubView {
  * @class D3BaseSubViewSVGElements
  * @author Brandon Clayton
  */
-export class D3BaseSubViewSVGElements {
+class D3BaseSubViewSVGElements {
 
   constructor() {
     /** @type {SVGElement} The inner plot frame element */
@@ -184,3 +189,8 @@ export class D3BaseSubViewSVGElements {
   }
 
 }
+
+module.exports = {
+  D3BaseSubView,
+  D3BaseSubViewSVGElements
+};

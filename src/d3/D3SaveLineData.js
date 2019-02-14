@@ -1,7 +1,10 @@
 
-import { D3LineData } from './data/D3LineData.js';
+// import { D3LineData } from './data/D3LineData.js';
 
-import { Preconditions } from '../error/Preconditions.js';
+// import { Preconditions } from '../error/Preconditions.js';
+
+const { D3LineData } = require('./data/D3LineData');
+const Preconditions = require('../error/Preconditions');
 
 /**
  * @fileoverview Save D3LineData to a CSV file
@@ -11,7 +14,7 @@ import { Preconditions } from '../error/Preconditions.js';
  * @class D3SaveLineData
  * @author Brandon Clayton
  */
-export class D3SaveLineData {
+class D3SaveLineData {
 
   /**
    * @private 
@@ -77,3 +80,5 @@ export class D3SaveLineData {
   }
 
 }
+
+module.exports = D3SaveLineData;

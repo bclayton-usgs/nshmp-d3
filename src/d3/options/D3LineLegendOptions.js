@@ -1,5 +1,7 @@
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @fileoverview The options for D3LineLegend
@@ -10,7 +12,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3LineLegendOptions
  * @author Brandon Clayton 
  */
-export class D3LineLegendOptions {
+class D3LineLegendOptions {
 
   /**
    * 
@@ -210,7 +212,7 @@ export class D3LineLegendOptions {
  * @class D3LineLegendOptionsBuilder
  * @author Brandon Clayton
  */
-export class D3LineLegendOptionsBuilder { 
+class D3LineLegendOptionsBuilder { 
 
   /** @private */
   constructor() {
@@ -507,3 +509,8 @@ export class D3LineLegendOptionsBuilder {
   }
 
 }
+
+module.exports = {
+  D3LineLegendOptions,
+  D3LineLegendOptionsBuilder
+};

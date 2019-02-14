@@ -1,5 +1,7 @@
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @fileoverview Text options for plot when adding text to a plot.
@@ -9,7 +11,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3TextOptions
  * @author Brandon Clayton
  */
-export class D3TextOptions {
+class D3TextOptions {
  
   /**
    * @private
@@ -115,7 +117,7 @@ export class D3TextOptions {
  * @class D3TextOptionsBuilder
  * @author Brandon Clayton
  */
-export class D3TextOptionsBuilder {
+class D3TextOptionsBuilder {
 
   /**
    * @private
@@ -280,3 +282,8 @@ export class D3TextOptionsBuilder {
   }
 
 }
+
+module.exports = {
+  D3TextOptions,
+  D3TextOptionsBuilder
+};

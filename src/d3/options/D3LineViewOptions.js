@@ -1,8 +1,13 @@
 
-import { D3BaseViewOptions } from './D3BaseViewOptions.js';
-import { D3BaseViewOptionsBuilder } from './D3BaseViewOptions.js';
+// import { D3BaseViewOptions } from './D3BaseViewOptions.js';
+// import { D3BaseViewOptionsBuilder } from './D3BaseViewOptions.js';
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const {
+    D3BaseViewOptions,
+    D3BaseViewOptionsBuilder} = require('./D3BaseViewOptions');
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @fileoverview Create options for D3LineView
@@ -14,7 +19,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @extends D3BaseViewOptions
  * @author Brandon Clayton
  */
-export class D3LineViewOptions extends D3BaseViewOptions {
+class D3LineViewOptions extends D3BaseViewOptions {
 
   /** 
    * @private 
@@ -112,7 +117,7 @@ export class D3LineViewOptions extends D3BaseViewOptions {
  * @extends D3BaseViewOptionsBuilder
  * @author Brandon Clayton
  */
-export class D3LineViewOptionsBuilder extends D3BaseViewOptionsBuilder { 
+class D3LineViewOptionsBuilder extends D3BaseViewOptionsBuilder { 
   
   /** @private */
   constructor() { 
@@ -235,3 +240,8 @@ export class D3LineViewOptionsBuilder extends D3BaseViewOptionsBuilder {
   }
 
 }
+
+module.exports = {
+  D3LineViewOptions,
+  D3LineViewOptionsBuilder
+};

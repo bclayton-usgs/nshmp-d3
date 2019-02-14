@@ -1,7 +1,12 @@
 
-import { D3BaseSubView }  from './view/D3BaseSubView.js';
+// import { D3BaseSubView }  from './view/D3BaseSubView.js';
 
-import { Preconditions } from '../error/Preconditions.js';
+// import { Preconditions } from '../error/Preconditions.js';
+
+const d3 = require('d3');
+
+const { D3BaseSubView } = require('./view/D3BaseSubView');
+const Preconditions = require('../error/Preconditions');
 
 /**
  * @fileoverview Create a tooltip on a D3BaseSubView.
@@ -12,7 +17,7 @@ import { Preconditions } from '../error/Preconditions.js';
  * @class D3Tooltip
  * @author Brandon Clayton
  */
-export class D3Tooltip {
+class D3Tooltip {
 
   constructor() {}
 
@@ -137,3 +142,5 @@ export class D3Tooltip {
   }
 
 }
+
+module.exports = D3Tooltip;

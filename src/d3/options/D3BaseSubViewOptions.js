@@ -1,8 +1,12 @@
 
-import { D3SaveFigureOptions } from './D3SaveFigureOptions.js';
-import { D3TooltipOptions } from './D3TooltipOptions.js';
+// import { D3SaveFigureOptions } from './D3SaveFigureOptions.js';
+// import { D3TooltipOptions } from './D3TooltipOptions.js';
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const { D3SaveFigureOptions } = require('./D3SaveFigureOptions');
+const { D3TooltipOptions } = require('./D3TooltipOptions');
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @fileoverview Create options for D3BaseSubView.
@@ -20,7 +24,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3BaseSubViewOptions
  * @author Brandon Clayton
  */
-export class D3BaseSubViewOptions {
+class D3BaseSubViewOptions {
 
   /** 
    * @private
@@ -192,7 +196,7 @@ export class D3BaseSubViewOptions {
  * @class D3SubViewOptionsBuilder
  * @author Brandon Clayton
  */
-export class D3BaseSubViewOptionsBuilder {
+class D3BaseSubViewOptionsBuilder {
 
   /** @private */
   constructor() {
@@ -457,3 +461,8 @@ export class D3BaseSubViewOptionsBuilder {
   }
 
 }
+
+module.exports = {
+  D3BaseSubViewOptions,
+  D3BaseSubViewOptionsBuilder
+};

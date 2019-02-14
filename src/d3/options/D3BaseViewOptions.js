@@ -1,5 +1,7 @@
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @fileoverview Create options for D3BaseView. 
@@ -10,7 +12,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3BaseViewOptions
  * @author Brandon Clayton
  */
-export class D3BaseViewOptions {
+class D3BaseViewOptions {
 
   /**
    * @private 
@@ -83,7 +85,7 @@ export class D3BaseViewOptions {
  * @class D3BaseViewOptionsBuilder
  * @author Brandon Clayton
  */
-export class D3BaseViewOptionsBuilder {
+class D3BaseViewOptionsBuilder {
   
   /** @private */
   constructor() {
@@ -171,3 +173,8 @@ export class D3BaseViewOptionsBuilder {
   }
 
 }
+
+module.exports = {
+  D3BaseViewOptions,
+  D3BaseViewOptionsBuilder
+};

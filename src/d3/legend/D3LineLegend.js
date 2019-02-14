@@ -1,14 +1,26 @@
 
-import { D3LineData } from '../data/D3LineData.js';
-import { D3LineLegendOptions } from '../options/D3LineLegendOptions.js';
-import { D3LinePlot } from '../D3LinePlot.js';
-import { D3LineSeriesData } from '../data/D3LineSeriesData.js';
-import { D3LineSubView } from '../view/D3LineSubView.js';
-import { D3Utils } from '../D3Utils.js';
-import { D3XYPair } from '../data/D3XYPair.js';
+// import { D3LineData } from '../data/D3LineData.js';
+// import { D3LineLegendOptions } from '../options/D3LineLegendOptions.js';
+// import { D3LinePlot } from '../D3LinePlot.js';
+// import { D3LineSeriesData } from '../data/D3LineSeriesData.js';
+// import { D3LineSubView } from '../view/D3LineSubView.js';
+// import { D3Utils } from '../D3Utils.js';
+// import { D3XYPair } from '../data/D3XYPair.js';
 
-import NshmpError from '../../error/NshmpError.js';
-import { Preconditions } from '../../error/Preconditions.js';
+// import NshmpError from '../../error/NshmpError.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const d3 = require('d3');
+
+const { D3LineData } = require('../data/D3LineData.js');
+const { D3LineLegendOptions } = require('../options/D3LineLegendOptions.js');
+const D3LinePlot = require('../D3LinePlot.js');
+const D3LineSeriesData = require('../data/D3LineSeriesData.js');
+const { D3LineSubView } = require('../view/D3LineSubView.js');
+const D3Utils = require('../D3Utils.js');
+const D3XYPair = require('../data/D3XYPair.js');
+const NshmpError = require('../../error/NshmpError.js');
+const Preconditions = require('../../error/Preconditions.js');
 
 /**
  * @fileoverview Create a legend for a D3LinePlot.
@@ -16,7 +28,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3LineLegend
  * @author Brandon Clayton
  */
-export class D3LineLegend {
+class D3LineLegend {
 
   /**
    * New instance of D3LineLegend
@@ -24,7 +36,7 @@ export class D3LineLegend {
    * @param {D3LinePlot} linePlot 
    */
   constructor(linePlot) {
-    Preconditions.checkArgumentInstanceOf(linePlot, D3LinePlot);
+    console.log(D3LinePlot);
     this.linePlot = linePlot;
   }
 
@@ -632,3 +644,5 @@ export class D3LineLegend {
   }
 
 }
+
+module.exports = D3LineLegend;

@@ -1,19 +1,20 @@
 
-import { D3LineAxes } from './axes/D3LineAxes.js';
-import { D3LineData } from './data/D3LineData.js';
-import { D3LineOptions } from './options/D3LineOptions.js';
-import { D3LineLegend } from './legend/D3LineLegend.js';
-import { D3LineSeriesData } from './data/D3LineSeriesData.js';
-import { D3LineSubView } from './view/D3LineSubView.js';
-import { D3LineView } from './view/D3LineView.js';
-import { D3SaveFigure} from './D3SaveFigure.js';
-import { D3SaveLineData } from './D3SaveLineData.js';
-import { D3TextOptions } from './options/D3TextOptions.js';
-import { D3Tooltip } from './D3Tooltip.js';
-import { D3Utils } from './D3Utils.js';
-import { D3XYPair } from './data/D3XYPair.js';
+const d3 = require('d3');
 
-import { Preconditions } from '../error/Preconditions.js';
+const D3LineAxes = require('./axes/D3LineAxes.js');
+const { D3LineData } = require('./data/D3LineData.js');
+const { D3LineOptions } = require('./options/D3LineOptions.js');
+const D3LineLegend = require('./legend/D3LineLegend.js');
+const D3LineSeriesData = require('./data/D3LineSeriesData.js');
+const { D3LineSubView } = require('./view/D3LineSubView.js');
+const { D3LineView } = require('./view/D3LineView.js');
+const D3SaveFigure = require('./D3SaveFigure.js');
+const D3SaveLineData = require('./D3SaveLineData.js');
+const { D3TextOptions } = require('./options/D3TextOptions.js');
+const D3Tooltip = require('./D3Tooltip.js');
+const D3Utils = require('./D3Utils.js');
+const D3XYPair = require('./data/D3XYPair.js');
+const Preconditions = require('../error/Preconditions.js');
 
 /**
  * @fileoverview Plot D3LineData
@@ -21,7 +22,7 @@ import { Preconditions } from '../error/Preconditions.js';
  * @class D3LinePlot
  * @author Brandon Clayton
  */
-export class D3LinePlot {
+class D3LinePlot {
 
   /**
    * New D3LinePlot instance.
@@ -1627,3 +1628,5 @@ export class D3LinePlot {
   }
 
 }
+
+module.exports = D3LinePlot;

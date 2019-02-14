@@ -1,6 +1,11 @@
 
-import NshmpError from '../../error/NshmpError.js';
-import { Preconditions } from '../../error/Preconditions.js';
+// import NshmpError from '../../error/NshmpError.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const d3 = require('d3');
+
+const NshmpError = require('../../error/NshmpError');
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @fileoverview Options for customizing a line in a line plot.
@@ -12,7 +17,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3LineOptions
  * @author Brandon Clayton
  */
-export class D3LineOptions {
+class D3LineOptions {
 
   /**
    * @private
@@ -289,7 +294,7 @@ export class D3LineOptions {
  * @class D3LineOptionsBuilder
  * @author Brandon Clayton
  */
-export class D3LineOptionsBuilder {
+class D3LineOptionsBuilder {
   
   /** @private */
   constructor() {
@@ -539,3 +544,8 @@ export class D3LineOptionsBuilder {
   }
 
 }
+
+module.exports = {
+  D3LineOptions,
+  D3LineOptionsBuilder
+};

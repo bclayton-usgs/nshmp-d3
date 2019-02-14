@@ -1,14 +1,27 @@
 
-import { D3BaseView, D3BaseViewFooterElements } from './D3BaseView.js';
-import { D3BaseViewBuilder } from './D3BaseView.js';
-import { D3LineData } from '../data/D3LineData.js';
-import { D3LineSeriesData } from '../data/D3LineSeriesData.js';
-import { D3LineSubView } from './D3LineSubView.js';
-import { D3LineSubViewOptions } from '../options/D3LineSubViewOptions.js';
-import { D3LineViewOptions } from '../options/D3LineViewOptions.js';
-import { D3XYPair } from '../data/D3XYPair.js';
+// import { D3BaseView, D3BaseViewFooterElements } from './D3BaseView.js';
+// import { D3BaseViewBuilder } from './D3BaseView.js';
+// import { D3LineData } from '../data/D3LineData.js';
+// import { D3LineSeriesData } from '../data/D3LineSeriesData.js';
+// import { D3LineSubView } from './D3LineSubView.js';
+// import { D3LineSubViewOptions } from '../options/D3LineSubViewOptions.js';
+// import { D3LineViewOptions } from '../options/D3LineViewOptions.js';
+// import { D3XYPair } from '../data/D3XYPair.js';
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const d3 = require('d3');
+
+const { D3BaseView } = require('./D3BaseView');
+const { D3BaseViewFooterElements } = require('./D3BaseView.js');
+const { D3BaseViewBuilder } = require('./D3BaseView.js');
+const { D3LineData } = require('../data/D3LineData.js');
+const D3LineSeriesData = require('../data/D3LineSeriesData.js');
+const { D3LineSubView } = require('./D3LineSubView.js');
+const { D3LineSubViewOptions } = require('../options/D3LineSubViewOptions.js');
+const { D3LineViewOptions } = require('../options/D3LineViewOptions.js');
+const D3XYPair = require('../data/D3XYPair.js');
+const Preconditions = require('../../error/Preconditions.js');
 
 /**
  * @fileoverview Create a view for line plots. The view can 
@@ -22,7 +35,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @extends D3BaseView
  * @author Brandon Clayton
  */
-export class D3LineView extends D3BaseView {
+class D3LineView extends D3BaseView {
 
   /**
    * @private
@@ -405,7 +418,7 @@ export class D3LineView extends D3BaseView {
  * @extends D3BaseViewBuilder
  * @author Brandon Clayton
  */
-export class D3LineViewBuilder extends D3BaseViewBuilder { 
+class D3LineViewBuilder extends D3BaseViewBuilder { 
 
   /** @private */
   constructor() {
@@ -444,7 +457,7 @@ export class D3LineViewBuilder extends D3BaseViewBuilder {
  * @extends D3BaseViewFooterElements
  * @author Brandon Clayton
  */
-export class D3LineViewFooterElements extends D3BaseViewFooterElements {
+class D3LineViewFooterElements extends D3BaseViewFooterElements {
 
   constructor() {
     super();
@@ -485,4 +498,10 @@ export class D3LineViewFooterElements extends D3BaseViewFooterElements {
     return this;
   }
 
+}
+
+module.exports = {
+  D3LineView,
+  D3LineViewBuilder,
+  D3LineViewFooterElements,
 }

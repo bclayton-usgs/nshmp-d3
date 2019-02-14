@@ -1,8 +1,11 @@
 
-import { D3LineData } from './data/D3LineData.js';
-import { D3LineSeriesData } from './data/D3LineSeriesData.js';
+// import { D3LineData } from './data/D3LineData.js';
+// import { D3LineSeriesData } from './data/D3LineSeriesData.js';
 
-import { Preconditions } from '../error/Preconditions.js';
+// import { Preconditions } from '../error/Preconditions.js';
+
+const D3LineSeriesData = require('./data/D3LineSeriesData');
+const Preconditions = require('../error/Preconditions');
 
 /**
  * @fileoverview D3 Utilities
@@ -10,7 +13,7 @@ import { Preconditions } from '../error/Preconditions.js';
  * @class D3Utils
  * @author Brandon Clayton
  */
-export class D3Utils {
+class D3Utils {
 
   /** @private */
   constructor() {}
@@ -69,3 +72,5 @@ export class D3Utils {
   }
 
 }
+
+module.exports = D3Utils;

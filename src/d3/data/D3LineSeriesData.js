@@ -1,9 +1,16 @@
 
-import { D3LineOptions } from '../options/D3LineOptions.js';
-import { D3Utils } from '../D3Utils.js';
-import { D3XYPair } from './D3XYPair.js'; 
+// import { D3LineOptions } from '../options/D3LineOptions.js';
+// import { D3Utils } from '../D3Utils.js';
+// import { D3XYPair } from './D3XYPair.js'; 
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const d3 = require('d3');
+
+const { D3LineOptions } = require('../options/D3LineOptions');
+const D3Utils = require('../D3Utils');
+const D3XYPair = require('../data/D3XYPair');
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @fileoverview Container class to hold XY values and assoiciated 
@@ -12,7 +19,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3LineSeriesData
  * @author Brandon Clayton
  */
-export class D3LineSeriesData {
+class D3LineSeriesData {
 
   /**
    * @param {Array<Number>} xValues The X values
@@ -169,3 +176,5 @@ export class D3LineSeriesData {
   }
 
 }
+
+module.exports = D3LineSeriesData;

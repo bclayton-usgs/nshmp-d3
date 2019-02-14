@@ -1,10 +1,18 @@
 
-import { D3LineData } from '../data/D3LineData.js';
-import { D3LineSubView } from '../view/D3LineSubView.js';
-import { D3LineView } from '../view/D3LineView.js';
-import { D3XYPair } from '../data/D3XYPair.js';
+// import { D3LineData } from '../data/D3LineData.js';
+// import { D3LineSubView } from '../view/D3LineSubView.js';
+// import { D3LineView } from '../view/D3LineView.js';
+// import { D3XYPair } from '../data/D3XYPair.js';
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const d3 = require('d3');
+
+const { D3LineData } = require('../data/D3LineData');
+const { D3LineSubView } = require('../view/D3LineSubView');
+const { D3LineView } = require('../view/D3LineView');
+const D3XYPair = require('../data/D3XYPair');
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @fileoverview Add X and Y axes, axes labels, and gridlines to
@@ -13,7 +21,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3LineAxes
  * @author Brandon Clayton
  */
-export class D3LineAxes {
+class D3LineAxes {
 
   /**
    * New instance of D3LineAxes
@@ -416,3 +424,5 @@ export class D3LineAxes {
   }
 
 }
+
+module.exports = D3LineAxes;

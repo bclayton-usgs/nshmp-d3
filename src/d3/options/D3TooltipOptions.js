@@ -1,5 +1,7 @@
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @fileoverview The options for D3Tooltip
@@ -10,7 +12,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3TooltipOptions
  * @author Brandon Clayton 
  */
-export class D3TooltipOptions {
+class D3TooltipOptions {
 
   /**
    * 
@@ -133,7 +135,7 @@ export class D3TooltipOptions {
  * @class D3TooltipOptionsBuilder
  * @author Brandon Clayton
  */
-export class D3TooltipOptionsBuilder {
+class D3TooltipOptionsBuilder {
 
   /** @private */
   constructor() {
@@ -327,3 +329,8 @@ export class D3TooltipOptionsBuilder {
   }
 
 }
+
+module.exports = {
+  D3TooltipOptions,
+  D3TooltipOptionsBuilder
+};

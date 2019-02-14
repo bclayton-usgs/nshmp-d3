@@ -1,9 +1,15 @@
 
-import { D3BaseSubViewOptions } from './D3BaseSubViewOptions.js';
-import { D3BaseSubViewOptionsBuilder } from './D3BaseSubViewOptions.js';
-import { D3LineLegendOptions } from './D3LineLegendOptions.js';
+// import { D3BaseSubViewOptions } from './D3BaseSubViewOptions.js';
+// import { D3BaseSubViewOptionsBuilder } from './D3BaseSubViewOptions.js';
+// import { D3LineLegendOptions } from './D3LineLegendOptions.js';
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const {
+    D3BaseSubViewOptions,
+    D3BaseSubViewOptionsBuilder } = require('./D3BaseSubViewOptions');
+const { D3LineLegendOptions } = require('./D3LineLegendOptions');
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @fileoverview Create options for D3LineSubView.
@@ -22,7 +28,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @extends D3BaseSubViewOptions
  * @author Brandon Clayton
  */
-export class D3LineSubViewOptions extends D3BaseSubViewOptions {
+class D3LineSubViewOptions extends D3BaseSubViewOptions {
 
   /** 
    * @private
@@ -316,7 +322,7 @@ export class D3LineSubViewOptions extends D3BaseSubViewOptions {
  * @extends D3BaseSubViewOptionsBuilder
  * @author Brandon Clayton
  */
-export class D3LineSubViewOptionsBuilder 
+class D3LineSubViewOptionsBuilder 
     extends D3BaseSubViewOptionsBuilder {
 
   /** @private */
@@ -809,3 +815,8 @@ export class D3LineSubViewOptionsBuilder
   }
 
 }
+
+module.exports = {
+  D3LineSubViewOptions,
+  D3LineSubViewOptionsBuilder
+};

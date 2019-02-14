@@ -1,8 +1,15 @@
 
-import { D3BaseSubView, D3BaseSubViewSVGElements } from './D3BaseSubView.js';
-import { D3LineSubViewOptions } from '../options/D3LineSubViewOptions.js';
+// import { D3BaseSubView, D3BaseSubViewSVGElements } from './D3BaseSubView.js';
+// import { D3LineSubViewOptions } from '../options/D3LineSubViewOptions.js';
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const d3 = require('d3');
+
+const {
+    D3BaseSubView,
+    D3BaseSubViewSVGElements } = require('./D3BaseSubView');
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @package
@@ -13,7 +20,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @extends D3BaseSubView
  * @author Brandon Clayton 
  */
-export class D3LineSubView extends D3BaseSubView {
+class D3LineSubView extends D3BaseSubView {
 
   /**
    * Create a new sub view for D3LineView
@@ -131,7 +138,7 @@ export class D3LineSubView extends D3BaseSubView {
  * @extends D3BaseSubViewSVGElements
  * @author Brandon Clayton
  */
-export class D3LineSubViewSVGElements extends D3BaseSubViewSVGElements {
+class D3LineSubViewSVGElements extends D3BaseSubViewSVGElements {
 
   constructor() {
     super();
@@ -203,3 +210,8 @@ export class D3LineSubViewSVGElements extends D3BaseSubViewSVGElements {
   }
 
 }
+
+module.exports = {
+  D3LineSubView,
+  D3LineSubViewSVGElements
+};

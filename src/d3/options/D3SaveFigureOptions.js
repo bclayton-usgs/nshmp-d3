@@ -1,5 +1,7 @@
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const Preconditions = require('../../error/Preconditions');
 
 /**
  * @fileoverview The options for D3SaveFigure
@@ -11,7 +13,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3SaveFigureOptions
  * @author Brandon Clayton
  */
-export class D3SaveFigureOptions {
+class D3SaveFigureOptions {
 
   /**
    * 
@@ -171,7 +173,7 @@ export class D3SaveFigureOptions {
  * @class D3SaveFigureOptionsBuilder
  * @author Brandon Clayton
  */
-export class D3SaveFigureOptionsBuilder {
+class D3SaveFigureOptionsBuilder {
 
   constructor() {
     /** @type {Boolean} */
@@ -456,3 +458,8 @@ export class D3SaveFigureOptionsBuilder {
   }
 
 }
+
+module.exports = {
+  D3SaveFigureOptions,
+  D3SaveFigureOptionsBuilder
+};

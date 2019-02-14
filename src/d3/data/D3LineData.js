@@ -1,11 +1,21 @@
 
-import { D3LineOptions } from '../options/D3LineOptions.js';
-import { D3LineSeriesData } from './D3LineSeriesData.js';
-import { D3LineSubView } from '../view/D3LineSubView.js';
-import { D3Utils } from '../D3Utils.js';
-import { D3XYPair }from './D3XYPair.js';
+// import { D3LineOptions } from '../options/D3LineOptions.js';
+// import { D3LineSeriesData } from './D3LineSeriesData.js';
+// import { D3LineSubView } from '../view/D3LineSubView.js';
+// import { D3Utils } from '../D3Utils.js';
+// import { D3XYPair }from './D3XYPair.js';
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const d3 = require('d3');
+
+const { D3LineOptions } = require('../options/D3LineOptions');
+const D3LineSeriesData = require('./D3LineSeriesData');
+const { D3LineSubView } = require('../view/D3LineSubView');
+const D3Utils = require('../D3Utils');
+const D3XYPair = require('../data/D3XYPair');
+const Preconditions = require('../../error/Preconditions');
+
 
 /**
  * @fileoverview Create the data series for line plots.
@@ -17,7 +27,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3LineData
  * @author Brandon Clayton
  */
-export class D3LineData {
+class D3LineData {
 
   /**
    * @private
@@ -323,7 +333,7 @@ export class D3LineData {
  * @class D3LineDataBuilder
  * @author Brandon Clayton
  */
-export class D3LineDataBuilder {
+class D3LineDataBuilder {
   
   /** @private */
   constructor() {
@@ -535,4 +545,9 @@ export class D3LineDataBuilder {
     return colors.length > nSeries ? colors.slice(0, nSeries) : colors;
   }
 
+}
+
+module.exports = {
+  D3LineData,
+  D3LineDataBuilder
 }

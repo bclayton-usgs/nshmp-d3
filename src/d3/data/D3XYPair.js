@@ -1,5 +1,8 @@
 
-import { Preconditions } from '../../error/Preconditions.js';
+// import { Preconditions } from '../../error/Preconditions.js';
+
+const Preconditions = require('../../error/Preconditions');
+
 
 /**
  * @fileoverview Container class to hold a X and Y pair 
@@ -7,7 +10,7 @@ import { Preconditions } from '../../error/Preconditions.js';
  * @class D3LineSeriesData
  * @author Brandon Clayton
  */
-export class D3XYPair {
+class D3XYPair {
   
   /**
    * @param {Number} x The X value 
@@ -41,3 +44,5 @@ export class D3XYPair {
   }
 
 }
+
+module.exports = D3XYPair;
