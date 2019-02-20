@@ -19,19 +19,18 @@ module.exports = function (grunt) {
   grunt.registerTask('dev', [
     'clean',
     'browserify',
-    'copy:dev'
+    'copy:dev',
+    'sass:dev'
   ]);
 
   /* Build distribution library */
   grunt.registerTask('build', [
     'clean',
     'browserify',
+    'sass:dev',
+    'sass:dist',
+    'copy:dist',
     'uglify',
   ]);
 
-  /* Starts distibution server */
-  grunt.registerTask('dist', [
-    'build',
-    'copy:dist',
-  ]);
 };
