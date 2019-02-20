@@ -1,9 +1,9 @@
 
-const { D3LineView } = require('d3/view/D3LineView');
-const D3LinePlot = require('d3/D3LinePlot');
-const { D3LineData } = require('d3/data/D3LineData');
-const { D3LineSubView } = require('d3/view/D3LineSubView');
-const { D3LineSubViewOptions } = require('d3/options/D3LineSubViewOptions');
+const { D3LineView } = require('view/D3LineView');
+const D3LinePlot = require('D3LinePlot');
+const { D3LineData } = require('data/D3LineData');
+const { D3LineSubView } = require('view/D3LineSubView');
+const { D3LineSubViewOptions } = require('options/D3LineSubViewOptions');
 
 /**
  * @fileoverview This is an example of plotting a simple
