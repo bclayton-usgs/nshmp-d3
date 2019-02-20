@@ -1,0 +1,6 @@
+.build
+.DS_STORE
+gruntconfig
+Gruntfile.js
+node_modules
+.sass-cache
