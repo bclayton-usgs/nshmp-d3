@@ -1,6 +1,7 @@
 .build
 .DS_STORE
+.sass-cache
 gruntconfig
 Gruntfile.js
 node_modules
-.sass-cache
+example
