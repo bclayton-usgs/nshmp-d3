@@ -1,4 +1,9 @@
 
+/* Bootstrap setup */
+const $ = require('jquery');
+window.$ = $;
+require('bootstrap');
+
 /* Main exports */
 const D3LinePlot = require('./lib/D3LinePlot');
 const D3SaveFigure = require('./lib/D3SaveFigure');
