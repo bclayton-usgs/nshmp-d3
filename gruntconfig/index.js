@@ -8,6 +8,7 @@ const config = {
   clean: require('./clean'),
   connect: require('./connect'),
   copy: require('./copy'),
+  sass: require('./sass'),
   uglify: require('./uglify'),
   watch: require('./watch'),
 
@@ -16,6 +17,7 @@ const config = {
     'grunt-contrib-clean',
     'grunt-contrib-connect',
     'grunt-contrib-copy',
+    'grunt-contrib-sass',
     'grunt-contrib-uglify-es',
     'grunt-contrib-watch',
   ]
