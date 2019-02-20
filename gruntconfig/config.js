@@ -3,7 +3,7 @@ const config = {
   build: '.build',
   example: 'example',
   dist: 'dist',
-  src: 'src',
+  src: 'lib',
   port: 3000
 };
 
