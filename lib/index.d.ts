@@ -1,7 +1,11 @@
 /** Type definitions for nshmp-d3 */
 
-export * from '../types/D3LinePlot';
-export * from '../types/D3SaveFigure';
-export * from '../types/D3SaveLineData';
-export * from '../types/D3Tooltip';
-export * from '../types/D3Utils';
+export * from './axes';
+export * from './data';
+export * from './error';
+export * from './legend';
+export * from './options';
+export * from './plot';
+export * from './save';
+export * from './util';
+export * from './view';
