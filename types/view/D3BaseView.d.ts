@@ -3,6 +3,7 @@
 import { D3BaseSubView } from './D3BaseSubView';
 import { D3BaseSubViewOptions } from '../options/D3BaseSubViewOptions';
 import { D3BaseViewOptions } from '../options/D3BaseViewOptions';
+import { D3LineView } from '../view/D3LineView';
 
 /**
  * Create a base view for plots to reside. The view 
@@ -146,7 +147,7 @@ export class D3BaseViewBuilder {
   /**
    * Return a new D3BaseView 
    */
-  build(): D3BaseSubView;
+  build(): D3BaseView;
 
   /**
    * Whether to add a grid line toogle in the view's header.

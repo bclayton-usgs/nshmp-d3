@@ -143,4 +143,41 @@ export class D3LineViewOptionsBuilder extends D3BaseViewOptionsBuilder {
    */
   syncYAxisScale(bool: boolean, scale?: string): D3LineViewOptionsBuilder;
 
+  /**
+   * Set the title font size in px.
+   * Default: 18
+   * 
+   * @param fontSize The title font size
+   */
+  titleFontSize(fontSize: number): D3LineViewOptionsBuilder;
+
+  /**
+   * Set the D3BaseView view size
+   * 
+   * @param size The view size, either: 'min' || 'minCenter' || 'max' 
+   */
+  viewSize(size: string): D3LineViewOptionsBuilder;
+
+  /**
+   * Set the Bootstrap column size when viewSize is'min'
+   *  
+   * @param size The Bootstrap column size with 
+   *    viewSize is 'min'
+   */
+  viewSizeMin(size: string): D3LineViewOptionsBuilder;
+
+  /**
+   * Set the Bootstrap column size when viewSize is'minCenter'
+   *  
+   * @param size The Bootstrap column size with viewSize is 'minCenter'
+   */
+  viewSizeMinCenter(size: string): D3LineViewOptionsBuilder;
+
+  /**
+   * Set the Bootstrap column size when viewSize is'max'
+   *  
+   * @param size The Bootstrap column size with viewSize is 'max'
+   */
+  viewSizeMax(size: string): D3LineViewOptionsBuilder;
+
 }
