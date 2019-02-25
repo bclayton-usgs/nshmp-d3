@@ -5,6 +5,7 @@ import { D3LineSubView } from './D3LineSubView';
 import { D3LineViewOptions } from '../options/D3LineViewOptions';
 import { D3LineData } from '../data/D3LineData';
 import { D3BaseViewOptions } from '../options/D3BaseViewOptions';
+import { D3LineSubViewOptions } from '../options/D3LineSubViewOptions';
 
 /**
  * @fileoverview Create a view for line plots. The view can 
@@ -96,7 +97,65 @@ export class D3LineViewBuilder extends D3BaseViewBuilder {
   protected constructor();
 
   /** Build a new line view */
-  build(): D3LineView | D3BaseView | any;
+  build(): D3LineView;
+  
+  /**
+   * Whether to add a grid line toogle in the view's header.
+   * Default: true
+   * 
+   * @param bool Whether to add the grid line toogle 
+   */
+  addGridLineToogle(bool: boolean): D3LineViewBuilder;
+
+  /**
+   * Whether to add a legend toogle in the view's header.
+   * Default: true
+   * 
+   * @param bool Whether to add the legend toogle 
+   */
+  addLegendToggle(bool: boolean): D3LineViewBuilder;
+
+  /**
+   * Whether to add a lower sub view; 
+   *    adds the ability to have an upper and lower plot in a single view.
+   * 
+   * Default D3BaseSubViewOptions are applied from
+   *    D3BaseSubViewOptions.lowerWithDefaults().
+   * 
+   * Use Builder.setLowerSubViewOptions to set custom settings.
+   * 
+   * Default: false
+   */
+  addLowerSubView(bool: boolean): D3LineViewBuilder;
+
+  /**
+   * Set the container element, where the view will be appended to.
+   * 
+   * @param el The container element to put the view. 
+   */
+  containerEl(el: HTMLElement): D3LineViewBuilder;
+
+  /**
+   * Set the lower sub view options.
+   * 
+   * @param options The lower sub view options. 
+   */
+  lowerSubViewOptions(options: D3LineSubViewOptions): D3LineViewBuilder;
+
+  /**
+   * Set the upper sub view options.
+   * 
+   * @param options The upper sub view options.
+   */
+  upperSubViewOptions(options: D3LineSubViewOptions): D3LineViewBuilder;
+
+  /**
+   * Set the view options.
+   * 
+   * @param options The view options.
+   */
+  viewOptions(options: D3LineViewOptions): D3LineViewBuilder;
+
 }
 
 /**

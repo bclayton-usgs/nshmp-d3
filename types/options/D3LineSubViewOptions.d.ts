@@ -2,6 +2,8 @@
 
 import { D3LineLegendOptions } from './D3LineLegendOptions';
 import { D3BaseSubViewOptions, D3BaseSubViewOptionsBuilder} from './D3BaseSubViewOptions';
+import { D3SaveFigureOptions } from '../options/D3SaveFigureOptions';
+import { D3TooltipOptions } from '../options/D3TooltipOptions';
 
 /**
  * Create options for D3LineSubView.
@@ -298,6 +300,14 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
   dragLineSnapTo(snapTo: number): D3LineSubViewOptionsBuilder;
 
   /**
+   * Set the filename for downloading.
+   * Default: 'file'
+   * 
+   * @param name The filename
+   */
+  filename(name: string): D3LineSubViewOptionsBuilder;
+
+  /**
    * Set the grid line color in HEX, rgb, or string name.
    * Default: 'E0E0E0'
    * @param color The grid line color
@@ -310,6 +320,14 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
    * @param width The grid line width
    */
   gridLineWidth(width: number):D3LineSubViewOptionsBuilder;
+
+  /**
+   * Set the label for the sub view.
+   * Default: ''
+   * 
+   * @param label The label
+   */
+  label(label: string): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the legend options.
@@ -328,6 +346,86 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
   lineLabel(label: string): D3LineSubViewOptionsBuilder;
 
   /**
+   * Set the bottom margin for the SVG plot in px.
+   * Default: 15
+   * 
+   * @param margin The bottom margin 
+   */
+  marginBottom(margin: number): D3LineSubViewOptionsBuilder;
+
+  /**
+   * Set the left margin for the SVG plot in px.
+   * Default: 20
+   * 
+   * @param margin The left margin 
+   */
+  marginLeft(margin: number): D3LineSubViewOptionsBuilder;
+
+  /**
+   * Set the right margin for the SVG plot in px.
+   * Default: 10
+   * 
+   * @param margin The right margin 
+   */
+  marginRight(margin: number): D3LineSubViewOptionsBuilder;
+
+  /**
+   * Set the top margin for the SVG plot in px.
+   * Default: 10
+   * 
+   * @param margin The top margin 
+   */
+  marginTop(margin: number): D3LineSubViewOptionsBuilder;
+
+  /**
+   * Set the bottom padding for the SVG plot in px.
+   * Default: 35
+   * 
+   * @param margin The bottom margin 
+   */
+  paddingBottom(padding: number): D3LineSubViewOptionsBuilder;
+
+  /**
+   * Set the left padding for the SVG plot in px.
+   * Default: 40
+   * 
+   * @param margin The left margin 
+   */
+  paddingLeft(padding: number): D3LineSubViewOptionsBuilder;
+
+  /**
+   * Set the right padding for the SVG plot in px.
+   * Default: 20
+   * 
+   * @param margin The right margin 
+   */
+  paddingRight(padding: number): D3LineSubViewOptionsBuilder;
+
+  /**
+   * Set the top padding for the SVG plot in px.
+   * Default: 10
+   * 
+   * @param margin The top margin 
+   */
+  paddingTop(padding: number): D3LineSubViewOptionsBuilder;
+
+  /**
+   * Set the SVG plot height in px.
+   * Default: 504 (upper) || 224 (lower)
+   * 
+   * @param height The plot height
+   */
+  plotHeight(height: number): D3LineSubViewOptionsBuilder;
+
+  /**
+   * Set the SVG plot width in px.
+   * Default: 896
+   * 
+   * @param width The plot width
+   */
+  plotWidth(width: number): D3LineSubViewOptionsBuilder;
+
+  /**
    * Set the reference line color in HEX, RGB, or string name.
    * Default: '#9E9E9E'
    * @param color The color
@@ -341,6 +439,14 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
    */
   referenceLineWidth(width: number): D3LineSubViewOptionsBuilder;
  
+  /**
+   * Set the save figure options.
+   * Default: D3SaveFigureOptions.withDefaults()
+   * 
+   * @param options The save figure options
+   */
+  saveFigureOptions(options: D3SaveFigureOptions): D3LineSubViewOptionsBuilder;
+
   /**
    * Whether to show the legend regardless of using the legend toggle.
    * Default: true
@@ -363,6 +469,14 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
    * @param size 
    */
   tickFontSize(size: number): D3LineSubViewOptionsBuilder;
+
+  /**
+   * Set the tooltip options.
+   * Default: D3TooltipOptions.withDefaults()
+   *  
+   * @param options The tooltip options
+   */
+  tooltipOptions(options: D3TooltipOptions): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the transition duration in milliseconds. Used when switching 
