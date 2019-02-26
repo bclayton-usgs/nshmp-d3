@@ -3,11 +3,11 @@
 const config = require('./config');
 
 const EXPORTS = [
-  'D3LinePlot',
-  'D3SaveFigure',
-  'D3SaveLineData',
-  'D3Tooltip',
-  'D3Utils',
+  'plot/D3LinePlot',
+  'save/D3SaveFigure',
+  'save/D3SaveLineData',
+  'util/D3Tooltip',
+  'util/D3Utils',
   'axes/D3LineAxes',
   'data/D3LineData',
   'data/D3LineSeriesData',
@@ -40,7 +40,7 @@ const browserify = {
   },
   source: {
     src: [],
-    dest: `${config.build}/${config.src}/nshmp-d3.js`,
+    dest: `${config.dist}/nshmp-d3.js`,
     options: {
       alias: EXPORTS
     }

@@ -19,10 +19,6 @@ const copy = {
         dest: `${config.dist}/css/nshmp-d3.css`
       }
     ]
-  },
-  dev: {
-    src: `./${config.src}/nshmp-d3.css`, 
-    dest: `${config.build}/${config.src}/nshmp-d3.css`
   }
 }
 

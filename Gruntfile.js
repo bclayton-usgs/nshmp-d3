@@ -8,27 +8,12 @@ module.exports = function (grunt) {
 
   grunt.initConfig(gruntConfig);
 
-  /* Default tasks for development */
+  /* Default tasks for to build library */
   grunt.registerTask('default', [
-    'dev',
-    'connect:dev',
-    'watch'
-  ]);
-
-  /* Build development library */
-  grunt.registerTask('dev', [
     'clean',
     'browserify',
-    'copy:dev',
-    'sass:dev'
-  ]);
-
-  /* Build distribution library */
-  grunt.registerTask('build', [
-    'clean',
-    'browserify',
-    'sass:dev',
-    'sass:dist',
+    'sass:css',
+    'sass:cssMin',
     'copy:dist',
     'uglify',
   ]);
