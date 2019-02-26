@@ -5,7 +5,8 @@ import {
   D3LinePlot,
   D3LineData,
   D3LineSubView,
-  D3LineSubViewOptions
+  D3LineSubViewOptions,
+  D3LineViewOptions
  } from '@nshmp/nshmp-d3';
 
 @Component({
@@ -15,15 +16,21 @@ import {
 })
 export class BasicPlotComponent implements OnInit {
 
-  @ViewChild('plot') containerEl: ElementRef<HTMLElement>;
+  @ViewChild('plot') plotEl: ElementRef<HTMLElement>;
 
   constructor() { }
 
   ngOnInit() {
-    const lineView = this.createLineView(this.containerEl.nativeElement);
+    /* Create the line view */
+    const lineView = this.createLineView(this.plotEl.nativeElement);
 
+    /* Set the plot title */
+    lineView.setTitle('Basic Line Plot');
+
+    /* Get sub view to plot in */
     const upperSubView = lineView.upperSubView;
 
+    /* Plot */
     this.plot(lineView, upperSubView);
   }
 
@@ -40,10 +47,16 @@ export class BasicPlotComponent implements OnInit {
         .filename('upper-line-plot')
         .build();
 
+    /* View options */
+    const viewOptions = D3LineViewOptions.builder()
+        .viewSize('minCenter')
+        .build();
+
     /* Create the line view */
     const lineView = D3LineView.builder()
         .containerEl(containerEl)
         .upperSubViewOptions(upperSubViewOptions)
+        .viewOptions(viewOptions)
         .build();
 
     return lineView;

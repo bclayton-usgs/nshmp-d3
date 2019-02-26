@@ -6,7 +6,8 @@ import {
   D3LineData,
   D3LineOptions,
   D3LinePlot,
-  D3LineSubView
+  D3LineSubView,
+  D3LineViewOptions
  } from '@nshmp/nshmp-d3';
 
 @Component({
@@ -73,12 +74,18 @@ export class CustomPlotComponent implements OnInit {
         .filename('upper-line-plot')
         .build();
 
+    /* View options */
+    const viewOptions = D3LineViewOptions.builder()
+        .viewSize('minCenter')
+        .build();
+
     /* Create the line view */
     const lineView = D3LineView.builder()
         .addLowerSubView(true)
         .containerEl(containerEl)
         .lowerSubViewOptions(lowerSubViewOptions)
         .upperSubViewOptions(upperSubViewOptions)
+        .viewOptions(viewOptions)
         .build();
 
     return lineView;
