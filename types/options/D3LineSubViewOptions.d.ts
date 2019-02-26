@@ -1,9 +1,11 @@
 /* D3LineSubViewOptions type definitions */
 
-import { D3LineLegendOptions } from './D3LineLegendOptions';
-import { D3BaseSubViewOptions, D3BaseSubViewOptionsBuilder} from './D3BaseSubViewOptions';
-import { D3SaveFigureOptions } from '../options/D3SaveFigureOptions';
-import { D3TooltipOptions } from '../options/D3TooltipOptions';
+import {
+  D3LineLegendOptions,
+  D3BaseSubViewOptions,
+  D3BaseSubViewOptionsBuilder,
+  D3SaveFigureOptions,
+  D3TooltipOptions } from '../../lib';
 
 /**
  * Create options for D3LineSubView.

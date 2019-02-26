@@ -1,10 +1,9 @@
 /* D3LineLegend type definitions */
 
-import d3 from 'd3';
-
-import { D3LineData } from '../data/D3LineData';
-import { D3LinePlot } from '../D3LinePlot';
-import { D3LineSubView } from '../view/D3LineSubView';
+import {
+  D3LineData,
+  D3LineSubView, 
+  D3LineView} from '../../lib';
 
 /**
  * Create a legend for a D3LinePlot.
@@ -16,13 +15,11 @@ export class D3LineLegend {
 
   /**
    * New instance of D3LineLegend
-   *  
-   * @param linePlot The line plot 
    */
-  constructor(linePlot: D3LinePlot);
+  constructor(view: D3LineView);
   
-  /** The line plot */
-  linePlot: D3LinePlot;
+  /** The line view */
+  view: D3LineView;
 
   /**
    * Create a legend on a sub view.
@@ -37,11 +34,6 @@ export class D3LineLegend {
    * @param subView The sub view 
    */
   hide(subView: D3LineSubView): void;
-
-  /**
-   * Hide legend on all sub views.
-   */
-  hideAll(): void;
 
   /**
    * Remove the legend from the sub view.
@@ -72,10 +64,5 @@ export class D3LineLegend {
    * Show legends on all sub views.
    */
   showAll(): void;
-
-  /**
-   * Sync upper and lower sub views.
-   */
-  syncSubViews(): void;
 
 }

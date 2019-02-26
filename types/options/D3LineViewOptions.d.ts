@@ -1,6 +1,8 @@
 /* D3LineViewOptions type definitions */
 
-import { D3BaseViewOptions, D3BaseViewOptionsBuilder } from './D3BaseViewOptions';
+import {
+  D3BaseViewOptions,
+  D3BaseViewOptionsBuilder } from '../../lib';
 
 /**
  * Create options for D3LineView

@@ -1,6 +1,6 @@
 /* D3SaveLineData type definitions */
 
-import { D3LineData } from './data/D3LineData';
+import { D3LineData } from '../../lib';
 
 /**
  * Save D3LineData to a CSV file

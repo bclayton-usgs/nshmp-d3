@@ -1,11 +1,14 @@
 /* D3LineView type definitions */
 
-import { D3BaseView, D3BaseViewBuilder, D3BaseViewFooterElements } from './D3BaseView';
-import { D3LineSubView } from './D3LineSubView';
-import { D3LineViewOptions } from '../options/D3LineViewOptions';
-import { D3LineData } from '../data/D3LineData';
-import { D3BaseViewOptions } from '../options/D3BaseViewOptions';
-import { D3LineSubViewOptions } from '../options/D3LineSubViewOptions';
+import {
+  D3BaseView,
+  D3BaseViewBuilder,
+  D3BaseViewFooterElements,
+  D3LineSubView,
+  D3LineViewOptions,
+  D3LineData,
+  D3BaseViewOptions,
+  D3LineSubViewOptions } from '../../lib';
 
 /**
  * @fileoverview Create a view for line plots. The view can 

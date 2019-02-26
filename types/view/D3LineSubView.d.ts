@@ -1,8 +1,10 @@
 
 /* D3LineSubView type definitions */
 
-import { D3BaseSubView, D3BaseSubViewSVGElements } from './D3BaseSubView';
-import { D3LineSubViewOptions } from '../options/D3LineSubViewOptions';
+import {
+  D3BaseSubView,
+  D3BaseSubViewSVGElements,
+  D3LineSubViewOptions } from '../../lib';
 
 /**
  * Create a sub view for a D3LineView. Adds the 

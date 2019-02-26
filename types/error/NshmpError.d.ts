@@ -1,6 +1,6 @@
 /* NshmpError type definitions */
 
-import { D3LinePlot } from '../D3LinePlot';
+import { D3LinePlot } from '../../lib';
 
 /**
  * Error class that will create a Bootstrap modal with the error message.

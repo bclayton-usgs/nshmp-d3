@@ -1,7 +1,8 @@
 /* D3LineSeriesData type definitions */
 
-import { D3LineOptions } from '../options/D3LineOptions';
-import { D3XYPair } from '../data/D3XYPair';
+import {
+  D3LineOptions,
+  D3XYPair } from '../../lib';
 
 /**
  * Container class to hold XY values and assoiciated D3LineOptions

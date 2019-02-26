@@ -1,9 +1,11 @@
 /* D3BaseView type definitions */
 
-import { D3BaseSubView } from './D3BaseSubView';
-import { D3BaseSubViewOptions } from '../options/D3BaseSubViewOptions';
-import { D3BaseViewOptions } from '../options/D3BaseViewOptions';
-import { D3LineView } from '../view/D3LineView';
+import {
+  D3BaseSubView,
+  D3BaseSubViewOptions,
+  D3BaseViewOptions,
+  D3LineView, 
+  D3LinePlot} from '../../lib';
 
 /**
  * Create a base view for plots to reside. The view 

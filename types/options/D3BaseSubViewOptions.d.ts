@@ -1,7 +1,8 @@
 /* D3BaseSubViewOptions type definitions */
 
-import { D3SaveFigureOptions } from './D3SaveFigureOptions';
-import { D3TooltipOptions } from './D3TooltipOptions';
+import {
+  D3SaveFigureOptions,
+  D3TooltipOptions } from '../../lib';
 
 /**
  * Create options for D3BaseSubView.

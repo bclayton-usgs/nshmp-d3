@@ -188,6 +188,13 @@ export class Preconditions {
   static checkStateArrayInstanceOf(arr: any[], type: object): void;
 
   /**
+   * Check an array to see if if each value is a number or null.
+   * 
+   * @param values Values to check
+   */
+  static checkStateArrayIsNumberOrNull(values: number[] | null[]): void;
+
+  /**
    * Check whether an array is of certain length.
    * 
    * @param arr The array to test

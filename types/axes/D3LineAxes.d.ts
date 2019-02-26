@@ -1,11 +1,12 @@
 /* D3LineAxes type definitions */
 
-import d3 from 'd3';
+import * as d3 from 'd3';
 
-import { D3LineData } from '../data/D3LineData';
-import { D3LineSubView } from '../view/D3LineSubView';
-import { D3LineView } from '../view/D3LineView';
-import { D3XYPair } from '../data/D3XYPair';
+import {
+  D3LineData,
+  D3LineSubView,
+  D3LineView,
+  D3XYPair } from '../../lib';
 
 /**
  * Add X and Y axes, axes labels, and gridlines to a D3LinePlot.
