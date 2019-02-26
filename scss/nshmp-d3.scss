@@ -1,5 +1,8 @@
 /** SCSS for nshmp-d3 library */
 
+/* Import Bootstrap */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
 /* D3 View */
 .D3View {
   position: relative;
