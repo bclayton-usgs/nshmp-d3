@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/bclayton-usgs/nshmp-d3#readme",
   "dependencies": {
+    "@nshmp/nshmp-web-utils": "^0.1.0",
     "@types/d3": "^5.7.1",
     "bootstrap": "^3.4.1",
     "d3": "^5.9.1",
