@@ -5,11 +5,11 @@ window.jQuery = $;
 require('bootstrap');
 
 /* Main exports */
-const D3LinePlot = require('./lib/D3LinePlot');
-const D3SaveFigure = require('./lib/D3SaveFigure');
-const D3SaveLineData = require('./lib/D3SaveLineData');
-const D3Tooltip = require('./lib/D3Tooltip');
-const D3Utils = require('./lib/D3Utils');
+const D3LinePlot = require('./lib/plot/D3LinePlot');
+const D3SaveFigure = require('./lib/save/D3SaveFigure');
+const D3SaveLineData = require('./lib/save/D3SaveLineData');
+const D3Tooltip = require('./lib/util/D3Tooltip');
+const D3Utils = require('./lib/util/D3Utils');
 
 /* Axes exports */
 const D3LineAxes = require('./lib/axes/D3LineAxes');
