@@ -1,6 +1,6 @@
 /* D3Utils type definitions */
 
-import { D3LineSeriesData } from './data/D3LineSeriesData';
+import { D3LineSeriesData } from '../../lib'; 
 
 /**
  * D3 Utilities
@@ -11,13 +11,6 @@ import { D3LineSeriesData } from './data/D3LineSeriesData';
 export class D3Utils {
 
   private constructor(); 
-
-  /**
-   * Check an array to see if if each value is a number or null.
-   * 
-   * @param values Values to check
-   */
-  static checkArrayIsNumberOrNull(values: number[] | null[]): void;
 
   /**
    * Increase/decrease the line width, marker size, and marker edge width

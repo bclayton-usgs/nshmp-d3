@@ -1,9 +1,10 @@
 /* D3LineData type definitions */
 
-import { D3LineOptions } from '../options/D3LineOptions';
-import { D3LineSeriesData } from '../data/D3LineSeriesData';
-import { D3LineSubView } from '../../lib/view';
-import { D3XYPair } from '../data/D3XYPair';
+import {
+  D3LineOptions,
+  D3LineSeriesData,
+  D3LineSubView,
+  D3XYPair } from '../../lib';
 
 /**
  * Create the data series for line plots.

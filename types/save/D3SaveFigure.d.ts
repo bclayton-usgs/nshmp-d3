@@ -1,8 +1,9 @@
 /* D3SaveFigure type definitions */
 
-import { D3BaseSubView } from './view/D3BaseSubView';
-import { D3BaseView } from './view/D3BaseView';
-import { D3SaveFigureOptions } from './options/D3SaveFigureOptions';
+import {
+  D3BaseSubView,
+  D3BaseView,
+  D3SaveFigureOptions } from '../../lib';
 
 /**
  * Preview and/or save a view's figures to:

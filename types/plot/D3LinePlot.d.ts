@@ -1,13 +1,14 @@
 /* D3LinePlot type definitions */
 
-import { D3LineAxes } from './axes/D3LineAxes';
-import { D3LineData } from './data/D3LineData';
-import { D3LineLegend } from './legend/D3LineLegend';
-import { D3LineOptions } from './options/D3LineOptions';
-import { D3LineSubView } from './view/D3LineSubView';
-import { D3LineView } from './view/D3LineView';
-import { D3TextOptions } from './options/D3TextOptions';
-import { D3Tooltip } from './D3Tooltip';
+import {
+  D3LineAxes,
+  D3LineData,
+  D3LineLegend,
+  D3LineOptions,
+  D3LineSubView,
+  D3LineView,
+  D3TextOptions,
+  D3Tooltip } from '../../lib';
 
 /**
  * Plot D3LineData

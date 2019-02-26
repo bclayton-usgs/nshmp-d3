@@ -1,6 +1,6 @@
 /* D3Tooltip type definitions */
 
-import { D3BaseSubView } from './view/D3BaseSubView';
+import { D3BaseSubView } from '../../lib';
 
 /**
  * Create a tooltip on a D3BaseSubView.

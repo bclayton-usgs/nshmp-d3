@@ -1,7 +1,5 @@
 /* D3LineOptions type definitions */
 
-import d3 from 'd3';
-
 /**
  * Options for customizing a line in a line plot.
  * 

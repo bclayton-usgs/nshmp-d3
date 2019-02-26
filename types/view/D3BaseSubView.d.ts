@@ -1,6 +1,6 @@
 /* D3BaseSubView type definitions */
 
-import { D3BaseSubViewOptions } from '../options/D3BaseSubViewOptions';
+import { D3BaseSubViewOptions } from '../../lib';
 
 /**
  * Create a base sub view for D3BaseView. Adds basic SVG structure for a plot.
