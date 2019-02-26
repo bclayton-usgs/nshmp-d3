@@ -22,7 +22,7 @@ export class D3BaseView {
 
   protected constructor();
 
-  /** Whether to add a grid line toogle to the header */
+  /** Whether to add a grid line toggle to the header */
   addGridLineToggle: boolean;
 
   /** Whether to add a legend toggle to the header */
@@ -152,18 +152,18 @@ export class D3BaseViewBuilder {
   build(): D3BaseView;
 
   /**
-   * Whether to add a grid line toogle in the view's header.
+   * Whether to add a grid line toggle in the view's header.
    * Default: true
    * 
-   * @param bool Whether to add the grid line toogle 
+   * @param bool Whether to add the grid line toggle 
    */
-  addGridLineToogle(bool: boolean): D3BaseViewBuilder;
+  addGridLineToggle(bool: boolean): D3BaseViewBuilder;
 
   /**
-   * Whether to add a legend toogle in the view's header.
+   * Whether to add a legend toggle in the view's header.
    * Default: true
    * 
-   * @param bool Whether to add the legend toogle 
+   * @param bool Whether to add the legend toggle 
    */
   addLegendToggle(bool: boolean): D3BaseViewBuilder;
 
