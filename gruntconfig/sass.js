@@ -4,7 +4,7 @@ const config = require('./config');
 const sass = {
   css: {
     files: {
-      'dist/css/nshmp-d3.css': `${config.src}/nshmp-d3.scss`
+      'dist/css/nshmp-d3.css': 'scss/nshmp-d3.scss'
     }
   },
   cssMin: {
@@ -12,7 +12,7 @@ const sass = {
       style: 'compressed'
     },
     files: {
-      'dist/css/nshmp-d3.min.css': `${config.src}/nshmp-d3.scss`
+      'dist/css/nshmp-d3.min.css': 'scss/nshmp-d3.scss'
     }
   }
 };

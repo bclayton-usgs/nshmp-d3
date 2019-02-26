@@ -42,9 +42,6 @@
               }
             ],
             "styles": [
-              "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "../lib/nshmp-d3.scss",
-              "node_modules/@nshmp/nshmp-ng-template/scss/styles.scss",
               "src/styles.scss"
             ],
             "scripts": [],
