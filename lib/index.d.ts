@@ -2,7 +2,6 @@
 
 export * from './axes';
 export * from './data';
-export * from './error';
 export * from './legend';
 export * from './options';
 export * from './plot';
