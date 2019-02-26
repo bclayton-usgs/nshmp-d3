@@ -2,12 +2,12 @@
 const config = require('./config');
 
 const sass = {
-  dev: {
+  css: {
     files: {
-      '.build/lib/nshmp-d3.css': `${config.src}/nshmp-d3.scss`
+      'dist/css/nshmp-d3.css': `${config.src}/nshmp-d3.scss`
     }
   },
-  dist: {
+  cssMin: {
     options: {
       style: 'compressed'
     },

@@ -1,66 +1,50 @@
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
-import { D3LineView } from '../../../apps/js/d3/view/D3LineView.js';
-import { D3LinePlot } from '../../../apps/js/d3/D3LinePlot.js';
-import { D3LineData } from '../../../apps/js/d3/data/D3LineData.js';
-import { D3LineSubView } from '../../../apps/js/d3/view/D3LineSubView.js';
+import {
+  D3LineSubViewOptions,
+  D3LineView,
+  D3LineData,
+  D3LineOptions,
+  D3LinePlot,
+  D3LineSubView,
+  D3LineViewOptions
+ } from '@nshmp/nshmp-d3';
 
-import { D3LineSubViewOptions } from '../../../apps/js/d3/options/D3LineSubViewOptions.js';
-import { D3LineOptions } from '../../../apps/js/d3/options/D3LineOptions.js';
+@Component({
+  selector: 'app-custom-plot',
+  templateUrl: './custom-plot.component.html',
+  styleUrls: ['./custom-plot.component.scss']
+})
+export class CustomPlotComponent implements OnInit {
 
-import ControlPanel from '../../../apps/js/lib/ControlPanel.js';
-import { Dashboard } from '../Dashboard.js';
-import Header from '../../../apps/js/lib/Header.js';
-import Footer from '../../../apps/js/lib/Footer.js';
+  @ViewChild('plot') plotEl: ElementRef;
 
-/**
- * @fileoverview This is an example of plotting a custom
- *    line graph using the d3 package.
- * 
- * @class D3CustomLinePlot
- * @author Brandon Clayton
- */
-export class D3CustomLinePlot {
+  constructor() { }
 
-  constructor() {
-    /* Create the footer */
-    let footer = new Footer();
-    footer.removeButtons();
-    footer.removeInfoIcon();
-
-    /* Create the header */
-    let header = new Header();
-    header.setTitle('D3 Custom Line Plot');
-    header.setCustomMenu(Dashboard.headerMenuItems());
-
-    /* Create a control panel */
-    let controlPanel = new ControlPanel();
-
-    /* Container for plot(s) */
-    let containerEl = document.querySelector('#content');
-
+  ngOnInit() {
     /* Create the line view */
-    let lineView = this.createLineView(containerEl);
+    const lineView = this.createLineView(this.plotEl.nativeElement);
 
     /* Set the plot title */
     lineView.setTitle('Custom Line Plot');
 
     /* Create the line plot */
-    let linePlot = new D3LinePlot(lineView);
+    const linePlot = new D3LinePlot(lineView);
 
     /* Plot the data in the upper sub view */
-    let upperSubViewData = this.plotUpperSubView(linePlot, lineView);
+    const upperSubViewData = this.plotUpperSubView(linePlot, lineView);
 
     /* Plot the data in the lower sub view */
-    let lowerSubViewData = this.plotLowerSubView(linePlot, lineView);
+    const lowerSubViewData = this.plotLowerSubView(linePlot, lineView);
 
     /* Set the data that will be saved */
     lineView.setSaveData(upperSubViewData, lowerSubViewData);
 
     /* Create a data table in the 'Data' view */
     lineView.createDataTable(upperSubViewData, lowerSubViewData);
-   
+
     /* Create metadata to be shown in the 'Metadata' view */
-    let metadata = new Map();
+    const metadata = new Map();
     metadata.set('This is some metadata', ['Some value', 'Another value']);
 
     /* Set the metadata */
@@ -68,35 +52,40 @@ export class D3CustomLinePlot {
 
     /* Create the metadata table */
     lineView.createMetadataTable();
-
   }
 
   /**
    * Create the view.
-   * 
-   * @param {HTMLElement} containerEl The container element
+   *
+   * @param containerEl The container element
    */
-  createLineView(containerEl) {
+  createLineView(containerEl: HTMLElement): D3LineView {
     /* Create the lower sub view options */
-    let lowerSubViewOptions = D3LineSubViewOptions.lowerBuilder()
+    const lowerSubViewOptions = D3LineSubViewOptions.lowerBuilder()
         .xLabel('X')
         .yLabel('Y')
         .filename('lower-line-plot')
         .build();
 
     /* Create the upper sub view options */
-    let upperSubViewOptions = D3LineSubViewOptions.upperBuilder()
+    const upperSubViewOptions = D3LineSubViewOptions.upperBuilder()
         .xLabel('X')
         .yLabel('Y')
         .filename('upper-line-plot')
         .build();
 
+    /* View options */
+    const viewOptions = D3LineViewOptions.builder()
+        .viewSize('minCenter')
+        .build();
+
     /* Create the line view */
-    let lineView = D3LineView.builder()
+    const lineView = D3LineView.builder()
         .addLowerSubView(true)
         .containerEl(containerEl)
         .lowerSubViewOptions(lowerSubViewOptions)
         .upperSubViewOptions(upperSubViewOptions)
+        .viewOptions(viewOptions)
         .build();
 
     return lineView;
@@ -104,12 +93,12 @@ export class D3CustomLinePlot {
 
   /**
    * Create the data with custom line options for the lower sub view plot.
-   *  
-   * @param {D3LineSubView} lowerSubView The lower sub view
+   *
+   * @param lowerSubView The lower sub view
    */
-  createLowerSubViewData(lowerSubView) {
+  createLowerSubViewData(lowerSubView: D3LineSubView): D3LineData {
     /* Create data for the lower sub view */
-    let data = D3LineData.builder()
+    const data = D3LineData.builder()
         .subView(lowerSubView)
         .data([ 0, 2, 4, 6 ], [ -5, 2, -1, 8 ])
         .data([ 0, 2, 4, 6 ], [ 5, -4, 8, -2 ])
@@ -120,17 +109,17 @@ export class D3CustomLinePlot {
 
   /**
    * Create the data with custom line options for the upper sub view plot.
-   *  
-   * @param {D3LineSubView} upperSubView The upper sub view
+   *
+   * @param upperSubView The upper sub view
    */
-  createUpperSubViewData(upperSubView) {
+  createUpperSubViewData(upperSubView: D3LineSubView): D3LineData {
     /**
      * Create custom line options with:
      *    - Star markers
      *    - Black marker edges
      *    - Marker size of 12
      */
-    let lineOptions1 = D3LineOptions.builder()
+    const lineOptions1 = D3LineOptions.builder()
         .label('Custom Line 1')
         .markerStyle('*')
         .markerEdgeColor('black')
@@ -142,7 +131,7 @@ export class D3CustomLinePlot {
      *    - Dashed line style
      *    - Square markers
      */
-    let lineOptions2 = D3LineOptions.builder()
+    const lineOptions2 = D3LineOptions.builder()
         .label('Custom Line 2')
         .lineStyle('--')
         .markerStyle('s')
@@ -153,14 +142,14 @@ export class D3CustomLinePlot {
      *    - Dotted line style
      *    - Cross markers
      */
-    let lineOptions3 = D3LineOptions.builder()
+    const lineOptions3 = D3LineOptions.builder()
         .label('Custom Line 3')
         .lineStyle(':')
         .markerStyle('x')
         .build();
 
     /* Create data for the upper sub view */
-    let data = D3LineData.builder()
+    const data = D3LineData.builder()
         .subView(upperSubView)
         .data([ 2, 4, 6, 8 ], [ 4, 9, 25, 15 ], lineOptions1)
         .data([ 2, 4, 6, 8 ], [ 5, 10, 8, 3 ], lineOptions2)
@@ -173,15 +162,15 @@ export class D3CustomLinePlot {
   /**
    * Plot some data.
    *
-   * @param {D3LinePlot} linePlot 
-   * @param {D3LineView} lineView The view
+   * @param linePlot
+   * @param lineView The view
    */
-  plotLowerSubView(linePlot, lineView) {
-    /* Get the lower sub view */ 
-    let subView = lineView.lowerSubView;
+  plotLowerSubView(linePlot: D3LinePlot, lineView: D3LineView): D3LineData {
+    /* Get the lower sub view */
+    const subView = lineView.lowerSubView;
 
     /* Create the data to plot */
-    let data = this.createLowerSubViewData(subView);
+    const data = this.createLowerSubViewData(subView);
 
     /* Plot the data */
     linePlot.plot(data);
@@ -195,32 +184,32 @@ export class D3CustomLinePlot {
   /**
    * Plot some data.
    *
-   * @param {D3LinePlot} linePlot 
-   * @param {D3LineView} lineView The view
+   * @param linePlot
+   * @param lineView The view
    */
-  plotUpperSubView(linePlot, lineView) {
-    /* Get the upper sub view */ 
-    let subView = lineView.upperSubView;
+  plotUpperSubView(linePlot: D3LinePlot, lineView: D3LineView): D3LineData {
+    /* Get the upper sub view */
+    const subView = lineView.upperSubView;
 
     /* Create the data to plot */
-    let data = this.createUpperSubViewData(subView);
+    const data = this.createUpperSubViewData(subView);
 
     /* Plot the data */
     linePlot.plot(data);
 
     /* Add a reference line at y=5 */
-    let yRef = 5;
-    let refLineEl = linePlot.plotHorizontalRefLine(subView, yRef);
+    const yRef = 5;
+    const refLineEl = linePlot.plotHorizontalRefLine(subView, yRef);
 
     /* Add text above reference line */
-    let textEl = linePlot.addText(
+    const textEl = linePlot.addText(
         subView,
         4,
         yRef + 0.5,
         `This line is draggable: y=${yRef}`);
 
     /* Y limits for a dragging the reference line */
-    let yLimits = [ 4, 20 ];
+    const yLimits = [ 4, 20 ];
 
     /**
      * Make the reference line draggable.
@@ -240,5 +229,4 @@ export class D3CustomLinePlot {
 
     return data;
   }
-
 }

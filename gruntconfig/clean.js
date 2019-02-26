@@ -3,7 +3,6 @@
 const config = require('./config');
 
 const clean = {
-  build: [ config.build ],
   dist: [ config.dist ]
 };
 
