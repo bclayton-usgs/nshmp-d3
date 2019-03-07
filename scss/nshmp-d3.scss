@@ -34,6 +34,11 @@
   border-top: 1px solid #ddd;
   position: relative;
 }
+
+.D3View .hide-panel {
+  visibility: hidden;
+  position: absolute;
+}
               
 /* Plot panel footer */
 .D3View .panel .panel-footer {
