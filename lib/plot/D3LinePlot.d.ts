@@ -12,7 +12,7 @@ import {
 
 /**
  * Plot D3LineData
- * 
+ *
  * @class D3LinePlot
  * @author Brandon Clayton
  */
@@ -20,26 +20,26 @@ export class D3LinePlot {
 
   /**
    * New D3LinePlot instance.
-   * 
-   * @param view The line view 
+   *
+   * @param view The line view
    */
   constructor(view: D3LineView);
 
   view: D3LineView;
 
   axes: D3LineAxes;
-  
+
   upperLineData: D3LineData;
-  
+
   lowerLineData: D3LineData;
-  
+
   tooltip: D3Tooltip;
-  
+
   legend: D3LineLegend;
 
   /**
-   * Select lines on multiple sub views that have the same id. 
-   * 
+   * Select lines on multiple sub views that have the same id.
+   *
    * @param id The id of the lines to select
    * @param linePlots The line plots
    * @param lineDatas The line data
@@ -48,7 +48,7 @@ export class D3LinePlot {
 
   /**
    * Sync selections between multiple sub views.
-   *  
+   *
    * @param  linePlots The line plots
    * @param lineDatas The line data
    */
@@ -56,7 +56,7 @@ export class D3LinePlot {
 
   /**
    * Add text to a sub view's plot.
-   *  
+   *
    * @param subView The sub view to add text
    * @param x The X coordinate of text
    * @param y The Y coordinate of text
@@ -68,12 +68,12 @@ export class D3LinePlot {
       subView: D3LineSubView,
       x: number,
       y: number,
-      text: string, 
+      text: string,
       textOptions?: D3TextOptions): SVGElement;
 
   /**
    * Clear all plots off a D3LineSubView.
-   * 
+   *
    * @param subView
    */
   clear(subView: D3LineSubView): void;
@@ -85,7 +85,7 @@ export class D3LinePlot {
 
   /**
    * Get the current X domain of the plot.
-   * 
+   *
    * @param subView The sub view to get domain
    * @returns The X axis domain: [ xMin, xMax ]
    */
@@ -93,7 +93,7 @@ export class D3LinePlot {
 
   /**
    * Get the current Y domain of the plot.
-   * 
+   *
    * @param subView The sub view to get the domain
    * @returns The Y axis domain: [ yMin, yMax ]
    */
@@ -101,12 +101,12 @@ export class D3LinePlot {
 
   /**
    * Make a vertical line draggable.
-   *  
+   *
    * @param subView The sub view were the line is to drag
    * @param refLineEl The reference line element
    * @param xLimit The limits that the line can be dragged
    * @param callback The funciton to call when the line is dragged.
-   *    The arguments passed to the callback function are 
+   *    The arguments passed to the callback function are
    *    (Number, D3LineSeriesData, SVGElement) where:
    *        - Number is the current X value
    *        - D3LineSeriesData is updated line series data
@@ -120,12 +120,12 @@ export class D3LinePlot {
 
   /**
    * Make a horizontal line draggable.
-   *  
+   *
    * @param subView The sub view were the line is to drag
    * @param refLineEl The reference line element
    * @param yLimit The limits that the line can be dragged
    * @param callback The funciton to call when the line is dragged.
-   *    The arguments passed to the callback function are 
+   *    The arguments passed to the callback function are
    *    (Number, D3LineSeriesData, SVGElement) where:
    *        - Number is the current Y value
    *        - D3LineSeriesData is updated line series data
@@ -139,7 +139,7 @@ export class D3LinePlot {
 
   /**
    * Move a text element to a new location.
-   *  
+   *
    * @param subView The sub view of the text
    * @param x The new X coordinate
    * @param y The new Y coordinate
@@ -151,7 +151,7 @@ export class D3LinePlot {
    * Fire a custom function when a line or symbol is selected.
    * Arguments passed to the callback function:
    *    - D3LineSeriesData: The series data from the plot selection
-   * 
+   *
    * @param lineData The line data
    * @param callback Function to call when plot is selected
    */
@@ -159,21 +159,21 @@ export class D3LinePlot {
 
   /**
    * Creates a 2-D line plot from D3LineData.
-   *  
+   *
    * @param lineData The line data to plot
    */
   plot(lineData: D3LineData): void;
 
   /**
    * Plot a reference line at zero, y=0.
-   * 
+   *
    * @param subView The sub view to add the line to
    */
   plotZeroRefLine(subView: D3LineSubView): void;
 
   /**
    * Plot a horizontal reference line, y=value.
-   * 
+   *
    * @param subView The sub view to put reference line
    * @param y The Y value of reference line
    * @param lineOptions The line options
@@ -183,7 +183,7 @@ export class D3LinePlot {
 
   /**
    * Plot a vertical reference line, x=value.
-   * 
+   *
    * @param subView The sub view to put reference line
    * @param x The X value of reference line
    * @param lineOptions The line options
@@ -193,7 +193,7 @@ export class D3LinePlot {
 
   /**
    * Get an SVG element in a sub view's plot based on the data's id.
-   * 
+   *
    * @param subView The sub view the data element is in
    * @param id The id of the data element
    * @returns The SVG element with that id
@@ -201,8 +201,8 @@ export class D3LinePlot {
   querySelector(subView: D3LineSubView, id: string): SVGElement;
 
   /**
-   * Get SVG elements in a sub view's plot based on the data's id. 
-   * 
+   * Get SVG elements in a sub view's plot based on the data's id.
+   *
    * @param subView The sub view the data element is in
    * @param id The id of the data element
    * @returns Node list of SVG elements with that id
@@ -211,7 +211,7 @@ export class D3LinePlot {
 
   /**
    * Select lines of multiple line data given an id.
-   *  
+   *
    * @param id of line to select
    * @param lineDatas The line data
    */
@@ -224,7 +224,7 @@ export class D3LinePlot {
 
   /**
    * Update the text on a text element.
-   * 
+   *
    * @param textEl The text element
    * @param text The new text
    */
@@ -232,7 +232,7 @@ export class D3LinePlot {
 
   /**
    * Update the text on a text element.
-   * 
+   *
    * @param textEl The text element
    * @param textOptions Optional text options
    */

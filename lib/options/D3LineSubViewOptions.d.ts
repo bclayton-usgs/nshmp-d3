@@ -9,17 +9,17 @@ import {
 
 /**
  * Create options for D3LineSubView.
- * 
+ *
  * Use D3LineSubViewOptions.lowerBuilder() or
- *    D3LineSubViewOptions.upperBuilder() to customize options 
- *    for lower and upper sub view or use 
- *    D3LineSubViewOptions.upperWithDefaults() or 
+ *    D3LineSubViewOptions.upperBuilder() to customize options
+ *    for lower and upper sub view or use
+ *    D3LineSubViewOptions.upperWithDefaults() or
  *    D3LineSubViewOptions.lowerWithDefaults() for default options.
- * 
- * Note: The only difference between upperWithDefaults() and 
+ *
+ * Note: The only difference between upperWithDefaults() and
  *    lowerWithDefault() is the plot height. The lower view defaults with
  *    224 px for plot height while the upper is 504 px.
- * 
+ *
  * @class D3LineSubViewOptions
  * @extends D3BaseSubViewOptions
  * @author Brandon Clayton
@@ -35,41 +35,41 @@ export class D3LineSubViewOptions extends D3BaseSubViewOptions {
   axisLabelFontWeight: number;
 
   /**
-   * The default X limit when the D3LineView is shown with no data. 
-   * Default: [ 0.01, 10 ] 
+   * The default X limit when the D3LineView is shown with no data.
+   * Default: [ 0.01, 10 ]
    */
   defaultXLimit: number[];
-  
+
   /**
-   * The default X limit when the D3LineView is shown with no data. 
-   * Default: [ 0.01, 1 ] 
+   * The default X limit when the D3LineView is shown with no data.
+   * Default: [ 0.01, 1 ]
    */
   defaultYLimit: number[];
-  
+
   /**
    * Snap lines that are being dragged to the nearest specified value.
    * Default: 0.01
    */
   dragLineSnapTo: number;
 
-  /** 
+  /**
    * Color of axes grid lines.
-   * Default: '#E0E0E0' 
+   * Default: '#E0E0E0'
    */
   gridLineColor: string;
 
   /**
    * Width of axes grid lines.
-   * Default: 0.75 
+   * Default: 0.75
    */
   gridLineWidth: number;
-  
-  /** 
-   * Axes label font size in px. 
+
+  /**
+   * Axes label font size in px.
    * Default: 16
    */
   labelFontSize: number;
-  
+
   /**
    * The legend options.
    * Default: D3LineLegendOptions.withDefaults()
@@ -101,7 +101,7 @@ export class D3LineSubViewOptions extends D3BaseSubViewOptions {
   showLegend: boolean;
 
   /**
-   * The font size of the exponents on the tick mark values in px. 
+   * The font size of the exponents on the tick mark values in px.
    * Only when in log space.
    * Default: 8
    */
@@ -139,7 +139,7 @@ export class D3LineSubViewOptions extends D3BaseSubViewOptions {
   xAxisScale: string;
 
   /**
-   * The number of digits after decimal place when 
+   * The number of digits after decimal place when
    *    xValueToExponent is set to true.
    * Default: 4
    */
@@ -159,7 +159,7 @@ export class D3LineSubViewOptions extends D3BaseSubViewOptions {
 
   /**
    * The number of tick marks for the X axis.
-   * The specified count is only a hint; the scale may return more or 
+   * The specified count is only a hint; the scale may return more or
    *    fewer values depending on the domain.
    * Default: 8
    */
@@ -171,7 +171,7 @@ export class D3LineSubViewOptions extends D3BaseSubViewOptions {
    * Default: false
    */
   xValueToExponent: boolean;
-  
+
   /**
    * The Y axis location: 'left' || 'right'
    * Default: 'left'
@@ -197,7 +197,7 @@ export class D3LineSubViewOptions extends D3BaseSubViewOptions {
   yAxisScale: string;
 
   /**
-   * The number of digits after decimal place when 
+   * The number of digits after decimal place when
    *    yValueToExponent is set to true.
    * Default: 4
    */
@@ -208,7 +208,7 @@ export class D3LineSubViewOptions extends D3BaseSubViewOptions {
    * Default: 'Y'
    */
   yLabel: string;
-  
+
   /**
    * Padding around the Y label in px.
    * Default: 10
@@ -217,7 +217,7 @@ export class D3LineSubViewOptions extends D3BaseSubViewOptions {
 
   /**
    * The number of tick marks for the Y axis.
-   * The specified count is only a hint; the scale may return more or 
+   * The specified count is only a hint; the scale may return more or
    *    fewer values depending on the domain.
    * Default: 6
    */
@@ -230,23 +230,23 @@ export class D3LineSubViewOptions extends D3BaseSubViewOptions {
    */
   yValueToExponent: boolean;
 
-  /** 
-   * Return new D3LineSubViewOptionsBuilder for lower sub view 
+  /**
+   * Return new D3LineSubViewOptionsBuilder for lower sub view
    */
   static lowerBuilder(): D3LineSubViewOptionsBuilder;
 
-  /** 
-   * Return new D3LineSubViewOptions for lower sub view 
+  /**
+   * Return new D3LineSubViewOptions for lower sub view
    */
   static lowerWithDefaults(): D3LineSubViewOptions;
 
-  /** 
-   * Return new D3LineSubViewOptionsBuilder for upper sub view 
+  /**
+   * Return new D3LineSubViewOptionsBuilder for upper sub view
    */
   static upperBuilder(): D3LineSubViewOptionsBuilder;
 
-  /** 
-   * Return new D3LineSubViewOptions for upper sub view 
+  /**
+   * Return new D3LineSubViewOptions for upper sub view
    */
   static upperWithDefaults(): D3LineSubViewOptions;
 
@@ -254,10 +254,10 @@ export class D3LineSubViewOptions extends D3BaseSubViewOptions {
 
 /**
  * Builder for D3LineSubViewOptions.
- * 
+ *
  * Use D3LineSubViewOptions.lowerBuilder() or
  *    D3LineSubViewOptions.upperBuilder() for new instance of builder.
- * 
+ *
  * @class D3LineSubViewOptionsBuilder
  * @extends D3BaseSubViewOptionsBuilder
  * @author Brandon Clayton
@@ -275,20 +275,20 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
   /**
    * Set the font weight for the X and Y axis labels.
    * Default: 500
-   * @param weight The font weight 
+   * @param weight The font weight
    */
   axisLabelFontWeight(weight: number): D3LineSubViewOptionsBuilder;
 
   /**
-   * Set the default X limit when the D3LineView is shown with no data. 
-   * Default: [ 0.01, 10 ] 
+   * Set the default X limit when the D3LineView is shown with no data.
+   * Default: [ 0.01, 10 ]
    * @param xLimit The [ min, max] for the X axis
    */
   defaultXLimit(xLimit: number[]): D3LineSubViewOptionsBuilder;
 
   /**
-   * Set the default Y limit when the D3LineView is shown with no data. 
-   * Default: [ 0.01, 1 ] 
+   * Set the default Y limit when the D3LineView is shown with no data.
+   * Default: [ 0.01, 1 ]
    * @param yLimit The [ min, max ] for the Y axis
    */
   defaultYLimit(yLimit: number[]): D3LineSubViewOptionsBuilder;
@@ -296,7 +296,7 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
   /**
    * Snap a line to the nearest value when dragging.
    * Default: 0.01
-   * 
+   *
    * @param snapTo Snap to value
    */
   dragLineSnapTo(snapTo: number): D3LineSubViewOptionsBuilder;
@@ -304,7 +304,7 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
   /**
    * Set the filename for downloading.
    * Default: 'file'
-   * 
+   *
    * @param name The filename
    */
   filename(name: string): D3LineSubViewOptionsBuilder;
@@ -326,7 +326,7 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
   /**
    * Set the label for the sub view.
    * Default: ''
-   * 
+   *
    * @param label The label
    */
   label(label: string): D3LineSubViewOptionsBuilder;
@@ -334,87 +334,87 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
   /**
    * Set the legend options.
    * Default: D3LineLegendOptions.withDefaults()
-   * 
-   * @param options The legend options 
+   *
+   * @param options The legend options
    */
   legendOptions(options: D3LineLegendOptions): D3LineSubViewOptionsBuilder;
 
   /**
-   * A label representing what the line data is. 
+   * A label representing what the line data is.
    * Default: ''
-   *  
-   * @param label The line label 
+   *
+   * @param label The line label
    */
   lineLabel(label: string): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the bottom margin for the SVG plot in px.
    * Default: 15
-   * 
-   * @param margin The bottom margin 
+   *
+   * @param margin The bottom margin
    */
   marginBottom(margin: number): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the left margin for the SVG plot in px.
    * Default: 20
-   * 
-   * @param margin The left margin 
+   *
+   * @param margin The left margin
    */
   marginLeft(margin: number): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the right margin for the SVG plot in px.
    * Default: 10
-   * 
-   * @param margin The right margin 
+   *
+   * @param margin The right margin
    */
   marginRight(margin: number): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the top margin for the SVG plot in px.
    * Default: 10
-   * 
-   * @param margin The top margin 
+   *
+   * @param margin The top margin
    */
   marginTop(margin: number): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the bottom padding for the SVG plot in px.
    * Default: 35
-   * 
-   * @param margin The bottom margin 
+   *
+   * @param margin The bottom margin
    */
   paddingBottom(padding: number): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the left padding for the SVG plot in px.
    * Default: 40
-   * 
-   * @param margin The left margin 
+   *
+   * @param margin The left margin
    */
   paddingLeft(padding: number): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the right padding for the SVG plot in px.
    * Default: 20
-   * 
-   * @param margin The right margin 
+   *
+   * @param margin The right margin
    */
   paddingRight(padding: number): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the top padding for the SVG plot in px.
    * Default: 10
-   * 
-   * @param margin The top margin 
+   *
+   * @param margin The top margin
    */
   paddingTop(padding: number): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the SVG plot height in px.
    * Default: 504 (upper) || 224 (lower)
-   * 
+   *
    * @param height The plot height
    */
   plotHeight(height: number): D3LineSubViewOptionsBuilder;
@@ -422,7 +422,7 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
   /**
    * Set the SVG plot width in px.
    * Default: 896
-   * 
+   *
    * @param width The plot width
    */
   plotWidth(width: number): D3LineSubViewOptionsBuilder;
@@ -433,18 +433,18 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
    * @param color The color
    */
   referenceLineColor(color: string): D3LineSubViewOptionsBuilder;
-  
+
   /**
-   * Set the reference line width. 
+   * Set the reference line width.
    * Default: 1.5
    * @param width The width
    */
   referenceLineWidth(width: number): D3LineSubViewOptionsBuilder;
- 
+
   /**
    * Set the save figure options.
    * Default: D3SaveFigureOptions.withDefaults()
-   * 
+   *
    * @param options The save figure options
    */
   saveFigureOptions(options: D3SaveFigureOptions): D3LineSubViewOptionsBuilder;
@@ -452,8 +452,8 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
   /**
    * Whether to show the legend regardless of using the legend toggle.
    * Default: true
-   * 
-   * @param show the legend 
+   *
+   * @param show the legend
    */
   showLegend(show: boolean): D3LineSubViewOptionsBuilder;
 
@@ -464,147 +464,147 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
    * @param size The font size
    */
   tickExponentFontSize(size: number): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Set the axes tick mark font size.
-   * Default: 12  
-   * @param size 
+   * Default: 12
+   * @param size
    */
   tickFontSize(size: number): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the tooltip options.
    * Default: D3TooltipOptions.withDefaults()
-   *  
+   *
    * @param options The tooltip options
    */
   tooltipOptions(options: D3TooltipOptions): D3LineSubViewOptionsBuilder;
 
   /**
-   * Set the transition duration in milliseconds. Used when switching 
+   * Set the transition duration in milliseconds. Used when switching
    *    between log and linear scale.
-   * Default: 500 
+   * Default: 500
    * @param time The duration
    */
   translationDuration(time: number): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Set the X axis location: 'top' || 'bottom'
-   * Default: 'bottom' 
+   * Default: 'bottom'
    * @param loc The location
    */
   xAxisLocation(loc: string): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Whether to extend the X domain to nice round numbers.
-   * Default: true 
+   * Default: true
    * @param bool Whether to have a nice domain
    */
   xAxisNice(bool: boolean): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Set the X axis scale: 'log' || 'linear'
-   * Default: 'linear' 
+   * Default: 'linear'
    * @param scale The X axis scale
    */
   xAxisScale(scale: string): D3LineSubViewOptionsBuilder;
 
   /**
-   * Set the number of digits after decimal place when 
+   * Set the number of digits after decimal place when
    *    xValueToExponent is set to true.
    * Default: 4
-   * 
+   *
    * @param digits The number of digits after decimal point
    */
   xExponentFractionDigits(digits: number): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Set the X axis label; can be an HTML string.
    * Default: ''
-   * @param label The X axis label 
+   * @param label The X axis label
    */
   xLabel(label: string): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Set the X label padding in px.
    * Default: 8
    * @param pad The padding
    */
   xLabelPadding(pad: number): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Set the number of X axis tick marks.
-   * The specified count is only a hint; the scale may return more or 
+   * The specified count is only a hint; the scale may return more or
    *    fewer values depending on the domain.
    *  Default: 8
    * @param count Number of tick marks
    */
   xTickMarks(count: number): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Whether to format the X value in exponential form when X value
    *    is shown on tooltip, in data view, and when saving data.
    * Default: false
-   * 
+   *
    * @param toExponenet Whether to format in exponential form
    */
   xValueToExponent(toExponenet: boolean): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the Y axis location: 'left' || 'right'
-   * Default: 'left' 
+   * Default: 'left'
    * @param loc The location
    */
   yAxisLocation(loc: string): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Whether to extend the Y domain to nice round numbers.
-   * Default: true 
+   * Default: true
    * @param bool Whether to have a nice domain
    */
   yAxisNice(bool: boolean): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Whether to reverse the Y axis direction.
    * Default: false
-   * 
+   *
    * @param bool To reverse Y axis
    */
   yAxisReverse(bool: boolean): D3LineSubViewOptionsBuilder;
 
   /**
    * Set the Y axis scale: 'log' || 'linear'
-   * Default: 'linear' 
+   * Default: 'linear'
    * @param scale The Y axis scale
    */
   yAxisScale(scale: string): D3LineSubViewOptionsBuilder;
-  
+
   /**
-   * Set the number of digits after decimal place when 
+   * Set the number of digits after decimal place when
    *    yValueToExponent is set to true.
    * Default: 4
-   * 
+   *
    * @param digits The number of digits after decimal point
    */
   yExponentFractionDigits(digits: number): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Set the Y axis label; can be an HTML string.
    * Default: ''
-   * @param label The Y axis label 
+   * @param label The Y axis label
    */
   yLabel(label: string): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Set the Y label padding in px.
    * Default: 10
    * @param pad The padding
    */
   yLabelPadding(pad: number): D3LineSubViewOptionsBuilder;
-  
+
   /**
    * Set the number of Y axis tick marks.
-   * The specified count is only a hint; the scale may return more or 
+   * The specified count is only a hint; the scale may return more or
    *    fewer values depending on the domain.
    * Default: 6
    * @param count Number of tick marks
@@ -615,7 +615,7 @@ export class D3LineSubViewOptionsBuilder extends D3BaseSubViewOptionsBuilder {
    * Whether to format the Y value in exponential form when Y value
    *    is shown on tooltip, in data view, and when saving data.
    * Default: false
-   * 
+   *
    * @param toExponenet Whether to format in exponential form
    */
   yValueToExponent(toExponenet: boolean): D3LineSubViewOptionsBuilder;

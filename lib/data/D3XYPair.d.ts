@@ -1,15 +1,15 @@
 /* D3XYPair type definitions */
 
 /**
- * Container class to hold a X and Y pair 
- * 
+ * Container class to hold a X and Y pair
+ *
  * @class D3LineSeriesData
  * @author Brandon Clayton
  */
 export class D3XYPair {
-  
+
   /**
-   * @param {Number} x The X value 
+   * @param {Number} x The X value
    * @param {Number} y The Y value
    * @param {String} xString Optional string representation
    * @param {String} yString Optional string representation
@@ -18,7 +18,7 @@ export class D3XYPair {
 
   /** The X value */
   x: number;
-  
+
   /** The Y value */
   y: number;
 

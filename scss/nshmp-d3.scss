@@ -8,12 +8,12 @@
   position: relative;
 }
 
-/* Plot panel header */                           
-.D3View .panel .panel-heading {                                     
-  background-color: #f7f7f7;                                                    
-  font-family: 'HelveticaNeue-Light',sans-serif;                                
+/* Plot panel header */
+.D3View .panel .panel-heading {
+  background-color: #f7f7f7;
+  font-family: 'HelveticaNeue-Light',sans-serif;
   position: relative;
-}                                                                               
+}
 
 .D3View .panel-title {
   font-size: 1.25em;
@@ -36,13 +36,13 @@
 }
 
 .D3View .hide-panel {
-  visibility: hidden;
-  position: absolute;
+  visibility: hidden !important;
+  position: absolute !important;
 }
-              
+
 /* Plot panel footer */
 .D3View .panel .panel-footer {
-  background-color: #f7f7f7;                                                    
+  background-color: #f7f7f7;
   font-size: 1em;
   position: relative;
 }

@@ -15,6 +15,9 @@ export class NavigationListService {
     }, {
       display: 'Custom Plot',
       routerLink: 'custom-plot'
+    }, {
+      display: 'Basic Map Plot',
+      routerLink: 'basic-map-plot'
     }
   ];
 
