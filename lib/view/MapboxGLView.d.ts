@@ -4,7 +4,8 @@ import {
   D3BaseSubViewOptions,
   D3BaseViewOptions,
   MapboxGLSubView,
-  D3BaseSubView } from '../../lib';
+  D3BaseSubView,
+  MapboxGLSubViewOptions } from '../../lib';
 
 /**
  * @extends D3BaseView
@@ -39,9 +40,9 @@ export class MapboxGLViewBuilder extends D3BaseViewBuilder {
 
   containerEl(el: HTMLElement): MapboxGLViewBuilder;
 
-  lowerSubViewOptions(options: D3BaseSubViewOptions): MapboxGLViewBuilder;
+  lowerSubViewOptions(options: MapboxGLSubViewOptions): MapboxGLViewBuilder;
 
-  upperSubViewOptions(options: D3BaseSubViewOptions): MapboxGLViewBuilder;
+  upperSubViewOptions(options: MapboxGLSubViewOptions): MapboxGLViewBuilder;
 
   viewOptions(options: D3BaseViewOptions): MapboxGLViewBuilder;
 
