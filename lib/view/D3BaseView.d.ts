@@ -148,6 +148,12 @@ export class D3BaseViewBuilder {
 
   protected constructor();
 
+  readonly _options: D3BaseViewOptions;
+
+  readonly _lowerSubViewOptions: D3BaseSubViewOptions;
+
+  readonly _upperSubViewOptions: D3BaseSubViewOptions;
+
   readonly _addGridLineToggle: boolean;
 
   readonly _addLegendToggle: boolean;
@@ -217,6 +223,8 @@ export class D3BaseViewBuilder {
    * @param options The view options.
    */
   viewOptions(options: D3BaseViewOptions): D3BaseViewBuilder;
+
+  protected _setDefaultViewOptions(): void;
 
 }
 

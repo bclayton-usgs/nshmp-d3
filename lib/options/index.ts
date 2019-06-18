@@ -9,3 +9,4 @@ export * from './D3LineViewOptions';
 export * from './D3SaveFigureOptions';
 export * from './D3TextOptions';
 export * from './D3TooltipOptions';
+export * from './MapboxGLSubViewOptions';

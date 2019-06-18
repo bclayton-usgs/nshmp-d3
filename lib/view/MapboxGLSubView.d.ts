@@ -1,16 +1,19 @@
 import {
   D3BaseSubView,
   D3BaseSubViewSVGElements,
-  D3BaseSubViewOptions} from '../../lib';
+  D3BaseSubViewOptions,
+  MapboxGLSubViewOptions } from '../../lib';
 
 /**
  * @extends D3BaseSubView
  */
 export class MapboxGLSubView extends D3BaseSubView {
 
-  constructor(containerEl: HTMLElement, options: D3BaseSubViewOptions);
+  constructor(containerEl: HTMLElement, options: MapboxGLSubViewOptions);
 
   svg: MapboxGLSVGElements;
+
+  options: MapboxGLSubViewOptions;
 
   _createSVGStructure(): MapboxGLSVGElements;
 }
