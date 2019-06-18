@@ -114,6 +114,13 @@ export class D3LineSubViewOptions extends D3BaseSubViewOptions {
   tickFontSize: number;
 
   /**
+   * The tooltip options.
+   * Default: D3TooltipOptions.withDefaults()
+   * @type {D3TooltipOptions}
+   */
+  tooltipOptions: D3TooltipOptions;
+
+  /**
    * The duration for any plot animations in milliseconds.
    * e.g. switching between log and linear scales.
    * Default: 500

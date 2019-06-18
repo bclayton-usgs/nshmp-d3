@@ -108,13 +108,6 @@ export class D3BaseSubViewOptions {
   saveFigureOptions: D3SaveFigureOptions;
 
   /**
-   * The tooltip options.
-   * Default: D3TooltipOptions.withDefaults()
-   * @type {D3TooltipOptions}
-   */
-  tooltipOptions: D3TooltipOptions;
-
-  /**
    * Return new D3BaseSubViewOptions.Builder for lower sub view
    *
    * @returns The lower base sub view options builder
@@ -265,13 +258,4 @@ export class D3BaseSubViewOptionsBuilder {
    * @param options The save figure options
    */
   saveFigureOptions(options: D3SaveFigureOptions): D3BaseSubViewOptionsBuilder;
-
-  /**
-   * Set the tooltip options.
-   * Default: D3TooltipOptions.withDefaults()
-   *
-   * @param options The tooltip options
-   */
-  tooltipOptions(options: D3TooltipOptions): D3BaseSubViewOptionsBuilder;
-
 }
