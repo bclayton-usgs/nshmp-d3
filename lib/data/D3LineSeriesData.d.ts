@@ -6,7 +6,7 @@ import {
 
 /**
  * Container class to hold XY values and assoiciated D3LineOptions
- * 
+ *
  * @class D3LineSeriesData
  * @author Brandon Clayton
  */
@@ -28,7 +28,7 @@ export class D3LineSeriesData {
 
   /** The X values */
   xValues: number[];
-  
+
   /** The Y values */
   yValues: number[];
 
@@ -46,11 +46,11 @@ export class D3LineSeriesData {
 
   /** The D3 symbol generator */
   d3Symbol: d3.Symbol<any, any>;
-  
+
   /**
    * Given two D3LineSeriesData, find the common X values and return
-   *    an array of XY pairs that were in common. 
-   *  
+   *    an array of XY pairs that were in common.
+   *
    * @param seriesA First series
    * @param seriesB Second series
    * @return The array of common XY pairs
@@ -61,8 +61,8 @@ export class D3LineSeriesData {
 
   /**
    * Given two D3LineSeriesData, find the common Y values and return
-   *    an array of XY pairs that were in common. 
-   *  
+   *    an array of XY pairs that were in common.
+   *
    * @param seriesA First series
    * @param seriesB Second series
    * @return The array of common XY pairs
@@ -83,9 +83,9 @@ export class D3LineSeriesData {
 
   /**
    * Remove all values under a cut off Y value.
-   * 
+   *
    * @param {Number} yMinCuttOff The cut off value
    */
-  removeSmallValues(yMinCuttOff: number): void; 
+  removeSmallValues(yMinCuttOff: number): void;
 
 }

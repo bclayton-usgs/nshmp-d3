@@ -2,11 +2,11 @@
 
 /**
  * Options for customizing a line in a line plot.
- * 
+ *
  * Use D3LineOptions.builder() to get new instance of D3LineOptionsBuilder.
  * See D3LineOptions.builder()
  * See D3LineOptionsBuilder
- * 
+ *
  * @class D3LineOptions
  * @author Brandon Clayton
  */
@@ -32,7 +32,7 @@ export class D3LineOptions {
   label: string;
 
   /**
-   * The line style: 
+   * The line style:
    *    - '-' || 'solid': Solid line
    *    - '--' || 'dashed': Dashed line
    *    - ':' || 'dotted': Dotted line
@@ -97,7 +97,7 @@ export class D3LineOptions {
   selectable: boolean;
 
   /**
-   * The plot selection multiplier to be applied to the 
+   * The plot selection multiplier to be applied to the
    *    line width, marker size, and marker edge size, when a line
    *    or marker is selected.
    * Default: 2.0
@@ -129,7 +129,7 @@ export class D3LineOptions {
    * The D3 symbol rotate.
    */
   d3SymbolRotate: number;
-  
+
   /**
    * Create a new D3LineOptions with default options.
    * @returns New D3LineOptions instance
@@ -151,26 +151,26 @@ export class D3LineOptions {
 
 /**
  * Builder for D3LineOptions
- * 
+ *
  * Use D3LineOptions.builder() for new instance of D3LineOptionsBuilder
- * 
+ *
  * @class D3LineOptionsBuilder
  * @author Brandon Clayton
  */
 export class D3LineOptionsBuilder {
-  
+
   protected constructor();
 
   /**
    * Returns new D3LineOptions
-   * 
+   *
    * @returns new D3LineOptions
    */
   build(): D3LineOptions;
 
   /**
    * Copy D3LineOptions into the builder.
-   * 
+   *
    * @param options The options to copy
    */
   fromCopy(options: D3LineOptions): D3LineOptionsBuilder;
@@ -179,43 +179,43 @@ export class D3LineOptionsBuilder {
    * Set the line color.
    * The default color is set based on the current color scheme
    *    in D3LineData.colorScheme.
-   * 
-   * @param color The line color 
+   *
+   * @param color The line color
    */
   color(color: string): D3LineOptionsBuilder;
 
   /**
    * Set the id of the line.
-   * 
-   * @param id The id of the line 
+   *
+   * @param id The id of the line
    */
   id(id: string): D3LineOptionsBuilder;
 
   /**
    * Set the label for the line. Shown in tooltip and legend.
-   * 
-   * @param label The label for the line 
+   *
+   * @param label The label for the line
    */
   label(label: string): D3LineOptionsBuilder;
 
   /**
-   * Set the line style: 
+   * Set the line style:
    *    - '-' || 'solid': Solid line
    *    - '--' || 'dashed': Dashed line
    *    - ':' || 'dotted': Dotted line
    *    - '-:' || 'dash-dot': Dahsed-dotted
    *    - 'none': No line
    * Default: 'solid'
-   * 
-   * @param style 
+   *
+   * @param style
    */
   lineStyle(style: string): D3LineOptionsBuilder;
 
   /**
    * Set the line width.
    * Default: 2.5
-   * 
-   * @param width The line width 
+   *
+   * @param width The line width
    */
   lineWidth(width: number): D3LineOptionsBuilder;
 
@@ -223,8 +223,8 @@ export class D3LineOptionsBuilder {
    * Set the marker color.
    * The default color is set based on the current color scheme
    *    in D3LineData.colorScheme
-   * 
-   * @param color 
+   *
+   * @param color
    */
   markerColor(color: String): D3LineOptionsBuilder;
 
@@ -232,23 +232,23 @@ export class D3LineOptionsBuilder {
    * Set the marker edge color.
    * The default color is set based on the current color scheme
    *    in D3LineData.colorScheme
-   * 
-   * @param color The marker edge color 
+   *
+   * @param color The marker edge color
    */
   markerEdgeColor(color: string): D3LineOptionsBuilder;
 
   /**
    * Set the marker edge width.
    * Default: 1.0
-   * 
-   * @param width The marker edge width 
+   *
+   * @param width The marker edge width
    */
   markerEdgeWidth(width: number): D3LineOptionsBuilder;
 
   /**
    * The marker size.
    * Default: 6
-   * 
+   *
    * @param size The marker size
    */
   markerSize(size: number): D3LineOptionsBuilder;
@@ -266,24 +266,24 @@ export class D3LineOptionsBuilder {
    *    - 'd' || 'diamond': Diamond markers
    *    - '*' || 'star': Star markers
    * Default: 'circle'
-   * 
+   *
    * @param marker The marker
    */
   markerStyle(marker: string): D3LineOptionsBuilder;
 
   /**
    * Set whether the data can be selected in the plot.
-   * 
+   *
    * @param selectable Whether data is selectable
    */
   selectable(selectable: boolean): D3LineOptionsBuilder;
 
   /**
-   * Set the plot selection multiplier to be applied to the 
+   * Set the plot selection multiplier to be applied to the
    *    line width, marker size, and marker edge size, when a line
    *    or marker is selected.
    * Default: 2.0
-   * 
+   *
    * @param mult The multiplier
    */
   selectionMultiplier(mult: number): D3LineOptionsBuilder;
@@ -291,7 +291,7 @@ export class D3LineOptionsBuilder {
   /**
    * Whether to show the data in the legend.
    * Default: true
-   * 
+   *
    * @param bool Whether to show the data in the legend
    */
   showInLegend(bool: boolean): D3LineOptionsBuilder;

@@ -13,7 +13,6 @@ export class MapboxGLSubView extends D3BaseSubView {
   svg: MapboxGLSVGElements;
 
   _createSVGStructure(): MapboxGLSVGElements;
-
 }
 
 /**
